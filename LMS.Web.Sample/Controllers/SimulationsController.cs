@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Web;
 using System.Web.Mvc;
+using aspnet_mvc_helpers;
 using Elmah;
 using LMS.Web.Sample.Helpers;
 using ApplicationException = System.ApplicationException;
@@ -15,6 +16,7 @@ namespace LMS.Web.Sample.Controllers
             return View();
         }
 
+        [NoCache]
         public JsonResult Send()
         {
             try

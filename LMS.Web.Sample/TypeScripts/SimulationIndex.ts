@@ -35,14 +35,19 @@ class SimulationIndex extends Base.Page {
 			});
 	}
 
-	private startExp(): void {
+    private startExp(): void {
+        this.sendException();
 		this.indexExp = setInterval(() => {
-			Base.Helpers.JsonAjaxService(
-				"GET",
-				"simulations/send"
-			).fail(() => { console.warn("call exp failed"); });
+		    this.sendException();
 		}, 1000);
-	}
+    }
+
+    private sendException() {
+        Base.Helpers.JsonAjaxService(
+            "GET",
+            "simulations/send"
+        ).fail(() => { console.warn("call exp failed"); });
+    }
 
 	private startPing(): void {
 		var usr: string;
@@ -62,7 +67,7 @@ class SimulationIndex extends Base.Page {
 				"POST",	
 				"http://localhost:1975/api/monitor/ping",
 				data,
-				{ "Authorization": "lmstoken 0000000-A1C2-E12C-1390-A8335801FDAB" },
+                { "Authorization": "lmstoken 00000000-0000-0000-0000-000000000000" },
 				true)
 				.fail(() => { console.warn("call ping failed"); });
 		}, 500);

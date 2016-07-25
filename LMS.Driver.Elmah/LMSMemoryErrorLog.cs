@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using Elmah;
 using LMS.Driver.Elmah.Models;
 using LMS.Drivers.Core;
@@ -20,12 +21,14 @@ namespace LMS.Driver.Elmah
         public LMSMemoryErrorLog(IDictionary config)
             : base(config)
         {
+            //Trace.TraceInformation("LMS Elmah logger starting");
             var logId = Helpers.Helpers.ResolveLogId(config);
             var url = Helpers.Helpers.ResolveUrl(config);
             this.ApplicationName = Helpers.Helpers.ResolveApplicationName(config);
 
             _client = new RestApi(url, logId);
-        }
+            //Trace.TraceInformation("LMS Elmah logger started");
+     }
 
         public override string Log(Error error)
         {
@@ -48,7 +51,7 @@ namespace LMS.Driver.Elmah
         //
 
         private static EntryCollection _entries;
-        private static readonly ReaderWriterLock _lock = new ReaderWriterLock();
+        private static readonly ReaderWriterLock Lock = new ReaderWriterLock();
 
         //
         // IMPORTANT! The size must be the same for all instances
@@ -149,7 +152,7 @@ namespace LMS.Driver.Elmah
             Guid newId = Guid.NewGuid();
             ErrorLogEntry entry = new ErrorLogEntry(this, newId.ToString(), error);
 
-            _lock.AcquireWriterLock(Timeout.Infinite);
+            Lock.AcquireWriterLock(Timeout.Infinite);
 
             try
             {
@@ -160,7 +163,7 @@ namespace LMS.Driver.Elmah
             }
             finally
             {
-                _lock.ReleaseWriterLock();
+                Lock.ReleaseWriterLock();
             }
 
             return newId.ToString();
@@ -173,7 +176,7 @@ namespace LMS.Driver.Elmah
 
         public override ErrorLogEntry GetError(string id)
         {
-            _lock.AcquireReaderLock(Timeout.Infinite);
+            Lock.AcquireReaderLock(Timeout.Infinite);
 
             ErrorLogEntry entry;
 
@@ -186,7 +189,7 @@ namespace LMS.Driver.Elmah
             }
             finally
             {
-                _lock.ReleaseReaderLock();
+                Lock.ReleaseReaderLock();
             }
 
             if (entry == null)
@@ -224,7 +227,7 @@ namespace LMS.Driver.Elmah
             ErrorLogEntry[] selectedEntries = null;
             int totalCount;
 
-            _lock.AcquireReaderLock(Timeout.Infinite);
+            Lock.AcquireReaderLock(Timeout.Infinite);
 
             try
             {
@@ -250,7 +253,7 @@ namespace LMS.Driver.Elmah
             }
             finally
             {
-                _lock.ReleaseReaderLock();
+                Lock.ReleaseReaderLock();
             }
 
             if (errorEntryList != null && selectedEntries != null)

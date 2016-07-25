@@ -56,6 +56,14 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScreenShots", "ScreenShots", "{6E7CA27A-F524-4D20-9CEE-B329729CC429}"
 	ProjectSection(SolutionItems) = preProject
 		ScreenShots\1.png = ScreenShots\1.png
+		ScreenShots\2 .png = ScreenShots\2 .png
+		ScreenShots\3HintedStatistics.png = ScreenShots\3HintedStatistics.png
+		ScreenShots\4BLogsAnalysis.png = ScreenShots\4BLogsAnalysis.png
+		ScreenShots\4Logsanalysis.png = ScreenShots\4Logsanalysis.png
+		ScreenShots\5LogDetail.png = ScreenShots\5LogDetail.png
+		ScreenShots\7FeedbacksList.png = ScreenShots\7FeedbacksList.png
+		ScreenShots\8FeedbackDetail.png = ScreenShots\8FeedbackDetail.png
+		ScreenShots\9.png = ScreenShots\9.png
 	EndProjectSection
 EndProject
 Global
