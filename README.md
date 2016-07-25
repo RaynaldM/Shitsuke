@@ -19,5 +19,17 @@ With integrated tools included in a **real-time dashboard** (i.e. with online us
 ![ScreenCopy 1](/ScreenShots/2.png "Dashboard") 
 ## Online users statistics
 ![ScreenCopy 1](/ScreenShots/3HintedStatistics.png "Stats") 
+## Logs analysis
+### List
+![ScreenCopy 1](/ScreenShots/4Logsanalysis.png "Logs List") 
+### List by occurences
+![ScreenCopy 1](/ScreenShots/4BLogsAnalysis.png "Logs Occurences List") 
+### Log Detail
+![ScreenCopy 1](/ScreenShots/5LogDetail.png "Log Detail") 
+## Feedbacks
+### Feedbacks List
+![ScreenCopy 1](/ScreenShots/7FeedbacksList.png "Feedbacks List") 
+### Feedback Detail
+![ScreenCopy 1](/ScreenShots/8FeedbackDetail.png "Feedback Detail") 
 ## Screen Login 
-![ScreenCopy 1](/ScreenShots/1.png "title") 
+![ScreenCopy 1](/ScreenShots/1.png "login") 
