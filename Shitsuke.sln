@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{9CD9E90F-7C96-4E89-A435-5D5067C3BAD6}"
 EndProject
@@ -17,6 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS.Services", "LMS.Service
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A9540100-02DA-480D-8F68-77A9AB8A5211}"
 	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
 		Todo.txt = Todo.txt
 	EndProjectSection
 EndProject
@@ -51,6 +52,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS.Resources", "LMS.Resources\LMS.Resources.csproj", "{0C4F194B-EA87-4306-AA22-A60680A37B1F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS.Driver.NLog", "LMS.Driver.NLog\LMS.Driver.NLog.csproj", "{CEF6618D-8402-46D9-B4CB-230B927BEE72}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScreenShots", "ScreenShots", "{6E7CA27A-F524-4D20-9CEE-B329729CC429}"
+	ProjectSection(SolutionItems) = preProject
+		ScreenShots\1.png = ScreenShots\1.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -121,5 +127,6 @@ Global
 		{26DDDBF6-4B21-409D-B0C2-24606D8898F3} = {2F64C560-DBD8-4E63-877E-8D21F0AF0CE4}
 		{CFF4B59D-3E9F-44A6-8DD8-AFF123EC50BD} = {4C7EA942-CCEA-4777-AF71-890237D47DCD}
 		{CEF6618D-8402-46D9-B4CB-230B927BEE72} = {2F64C560-DBD8-4E63-877E-8D21F0AF0CE4}
+		{6E7CA27A-F524-4D20-9CEE-B329729CC429} = {A9540100-02DA-480D-8F68-77A9AB8A5211}
 	EndGlobalSection
 EndGlobal
