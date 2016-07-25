@@ -1,0 +1,72 @@
+﻿@import "Variables";
+
+.context {
+    background-color: @body-bg;
+    margin-bottom: @padding-large-vertical;
+}
+
+.block {
+    min-height: 150px;
+}
+
+label {
+    font-size: @font-size-xsmall;
+    color: @gray-light;
+    margin: 0;
+}
+
+h4 {
+    margin-top: 0;
+}
+
+ul.list-unstyled {
+    & li {
+        font-size: @font-size-small;
+        color: @gray-light;
+
+        & span {
+            color: @gray-dark;
+            font-weight: 400;
+            margin-left: 3px;
+        }
+    }
+}
+
+.date-block {
+    margin-top: 16px;
+
+    & h6, & small {
+        font-size: @font-size-xsmall;
+        margin-bottom: 3px;
+        margin-top: 1px;
+        color: @gray;
+    }
+
+    & small {
+        overflow: hidden;
+        -ms-text-overflow: clip;
+        -o-text-overflow: clip;
+        text-overflow: clip;
+        white-space: nowrap;
+        float: right;
+    }
+
+    & p {
+        margin: 0;
+        font-size: @font-size-h6;
+        font-weight: 500;
+    }
+}
+
+.date-p {
+    /*border: 1px solid @gray-dark;*/
+    padding-left: 3px;
+    padding-right: 3px;
+    background-color: @gray-lighter;
+}
+
+.date-arrow {
+    padding-top: 27px;
+    padding-right:0;
+    padding-left:0;
+}

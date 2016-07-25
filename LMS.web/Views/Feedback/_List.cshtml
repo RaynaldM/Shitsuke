@@ -1,0 +1,19 @@
+﻿@using LMS.Resources
+<section id="feedback-list">
+    <div class="table-responsive">
+        <table id="grid-list" class="table table-hover table-striped table-condensed">
+            <thead>
+                <tr>
+                    <th data-column-id="Id" data-type="numeric" data-formatter="link" data-identifier="true" data-order="desc" data-align="right"
+                        data-cssclass="smallCell" data-headercssclass="smallCell">@Global.LmsId</th>
+                    <th data-column-id="Type" data-formatter="type" data-cssclass="smallCell" data-headercssclass="smallCell">@Global.LmsType</th>
+                    <th data-column-id="Status" data-formatter="status" data-cssclass="smallCell" data-headercssclass="smallCell">@Global.FeedbackStatus</th>
+                    <th data-column-id="Created" data-type="datetime" data-formatter="datetime">@Global.LmsCreationDate</th>
+                    <th data-column-id="Comments">@Global.LmsMessage</th>
+                    <th data-column-id="HaveScreenshot" data-sortable="false" data-formatter="attach" data-cssclass="smallCell" data-headercssclass="smallCell"> </th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</section>
+

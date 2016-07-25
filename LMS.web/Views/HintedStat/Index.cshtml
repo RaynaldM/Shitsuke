@@ -1,0 +1,32 @@
+﻿@using aspnet_mvc_helpers
+@using LMS.Resources
+@{
+    ViewBag.Title = Global.StatHinted;
+}
+@section Head{
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    @Html.Css("~/content/addons/bootstrap-material-datetimepicker.css")
+    @Html.Css("~/content/addons/chartist.css")
+}
+@section scripts{
+    @Html.CompressedPartial("_TopPagesTemplate")
+    @Html.CompressedPartial("_BrowserListTemplate")
+    @Html.CompressedPartial("_ScreenSizeListTemplate")
+    @Scripts.Render("~/bundles/graph")
+    @Html.JavaScript("~/Scripts/bootstrap-material-datetimepicker.js")
+    @Html.TypeScript("~/Typescripts/HintedStatIndex.ts")
+    <script>
+        window.CurrentBasePage = new HintedStatIndex();
+    </script>
+}
+@section wrapperbar{
+    <h1 class="h3 col-md-11">@ViewBag.Title</h1>
+}
+<section class="row">
+    <h2 class="h4 col-md-6">@Global.StatHintedShort <small>@Global.LmsByPeriodTo<span class="lib-date"></span></small></h2>
+    <div class="col-md-6">
+        @Html.CompressedPartial("_PeriodToolbar")
+    </div>
+</section>
+@Html.CompressedPartial("_HintedPanel")
+@Html.CompressedPartial("_TechnoPanel")

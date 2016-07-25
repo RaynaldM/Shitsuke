@@ -1,0 +1,58 @@
+﻿.context {
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.block {
+  min-height: 150px;
+}
+label {
+  font-size: 9px;
+  color: #bbb;
+  margin: 0;
+}
+h4 {
+  margin-top: 0;
+}
+ul.list-unstyled li {
+  font-size: 12px;
+  color: #bbb;
+}
+ul.list-unstyled li span {
+  color: #212121;
+  font-weight: 400;
+  margin-left: 3px;
+}
+.date-block {
+  margin-top: 16px;
+}
+.date-block h6,
+.date-block small {
+  font-size: 9px;
+  margin-bottom: 3px;
+  margin-top: 1px;
+  color: #666;
+}
+.date-block small {
+  overflow: hidden;
+  -ms-text-overflow: clip;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  white-space: nowrap;
+  float: right;
+}
+.date-block p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+.date-p {
+  /*border: 1px solid @gray-dark;*/
+  padding-left: 3px;
+  padding-right: 3px;
+  background-color: #eeeeee;
+}
+.date-arrow {
+  padding-top: 27px;
+  padding-right: 0;
+  padding-left: 0;
+}

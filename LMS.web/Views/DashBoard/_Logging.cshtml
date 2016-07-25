@@ -1,0 +1,29 @@
+﻿@using LMS.Resources
+<h2 class="h4">
+    @Global.Logs <small>
+        &nbsp;
+        @Global.DashboardLogsOnLast30min &nbsp;
+        <a class="small" href="@Url.Action("Index", "Logs")" title="@Global.DashboardLogsTitle">
+            <i class="fa fa-list-alt"></i>
+        </a>
+    </small>
+</h2>
+<div class="row">
+    <div class="col-md-2 col-sm-3 col-xs-12">
+        <div class="center">@Global.DashboardLogsReceived</div>
+        <div class="center" id="count-logs">...</div>
+    </div>
+    <div class="col-md-5 col-sm-9 col-xs-12">
+        <div class="center" title="@Global.DashboardReceivedLogsHistoryTitle">@Global.DashboardReceivedLogsHistory</div>
+        <div id="logs-histo"></div>
+    </div>
+    <div class="col-md-5 col-sm-6 col-xs-12">
+        <div class="center">@Global.DashboardLogsByType</div>
+        <div class="col-md-5" id="type-log"></div>
+        <div class="col-md-7" id="type-log-legend"></div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12" id="lastlog-panel"></div>
+</div>
+

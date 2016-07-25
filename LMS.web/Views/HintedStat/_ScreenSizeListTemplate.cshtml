@@ -1,0 +1,32 @@
+﻿@using LMS.Resources
+<script id="screensizelist-template" type="text/x-handlebars-template">
+    {{#if this}}
+    <table class="table table-condensed table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Global.StatScreenSize
+                </th>
+                <th>
+                    @Global.LmsCount
+                </th>
+                <th>
+                    @Global.StatPercentage
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each this}}
+            <tr>
+                <td>{{Name}}</td>
+                <td>{{Count}}</td>
+                <td>{{Avg}} %</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    {{else}}
+    <div>@Global.LmsNoData</div>
+    {{/if}}
+</script>
+

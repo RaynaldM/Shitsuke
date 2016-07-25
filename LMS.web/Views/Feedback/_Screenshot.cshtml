@@ -1,0 +1,15 @@
+﻿<script id="sc-template" type="text/x-handlebars-template">
+    <figure id="screenshot-fg">
+        <img id="screenshot-img" src="/Images/noscreenshot.png" alt="Screenshot" class="img-responsive img-thumbnail" />
+        <figcaption class="text-center">
+            {{browser}}&nbsp;{{browserMajorVersion}}
+            {{#ifCond mobile "===" true}}
+            &nbsp; on mobile&nbsp;
+            {{/ifCond}}&nbsp;run on&nbsp;
+            {{os}}&nbsp;
+            {{osVersion}}
+            &nbsp;|&nbsp;
+            screenSize:&nbsp;{{screen}}
+      </figcaption>
+    </figure>
+</script>

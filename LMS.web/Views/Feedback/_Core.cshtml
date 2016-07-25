@@ -1,0 +1,21 @@
+﻿@using LMS.Resources
+<script id="core-template" type="text/x-handlebars-template">
+    <h2 class="h3">
+        <i class="fa  {{#ifCond Type '===' 0 }}fa-bug text-danger{{/ifCond}}
+           {{#ifCond Type '===' 1 }} fa-lightbulb-o text-warning{{/ifCond}}
+           {{#ifCond Type '===' 2 }} fa-question text-success{{/ifCond}}"></i>&nbsp;
+        {{TypeText}}&nbsp;<small class="timeago" data-timeago="{{Created}}"></small>
+    </h2>
+    <div class="well">
+        @Global.FeedbackApplication&nbsp;<strong>{{Appcode}}</strong>&nbsp;| @Global.FeedbackPage&nbsp;<strong>{{Pageid}}</strong>&nbsp;| @Global.FeedbackUser&nbsp;<strong>{{Userid}}</strong>
+    </div>
+    <label>@Global.FeedbackUserWrote</label>
+    <blockquote>
+        <p> {{Comments}}</p>
+    </blockquote>
+    <div class="btn-group" role="group" aria-label="Feedback Status">
+        <button type="button" id="status-0" class="btn btn-default status">@Global.FeedbackNew</button>
+        <button type="button" id="status-1" class="btn btn-default">@Global.FeedbackOpen</button>
+        <button type="button" id="status-3" class="btn btn-default">@Global.FeedbackClose</button>
+    </div>
+</script>

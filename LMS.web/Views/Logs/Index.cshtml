@@ -1,0 +1,37 @@
+﻿@using aspnet_mvc_helpers
+@using LMS.Resources
+@{
+    ViewBag.Title = Global.LogsAnalysis;
+}
+@section Head{
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    @Html.Css("~/content/addons/bootstrap-material-datetimepicker.css")
+    @Html.Css("~/content/addons/jquery.bootgrid.css")
+    @Html.Css("~/content/addons/chartist.css")
+    @Html.Css("~/content/logsindex.css")
+}
+@section scripts{
+    @Scripts.Render("~/bundles/graph")
+    @Html.JavaScript("~/Scripts/bootstrap-material-datetimepicker.js")
+    @Html.JavaScript("~/Scripts/jquery.bootgrid.js")
+    @* @Html.JavaScript("~/bundles/addons", new[] { "~/Scripts/bootstrap-material-datetimepicker", "~/Scripts/jquery.bootgrid" })*@
+    @Html.TypeScript("~/Typescripts/LogsIndex.ts", true)
+    <script>
+        window.CurrentBasePage = new LogsIndex();
+    </script>
+}
+@section wrapperbar{
+    <h1 class="h3 col-md-11">@ViewBag.Title</h1>
+}
+<section class="row">
+    <h2 class="h4 col-md-4 col-sm-12">@Global.Logs <small>@Global.LmsByPeriodTo<span class="lib-date"></span></small></h2>
+    <div class="col-md-8 col-sm-12">
+        <div role="group" class="btn-group pull-left">
+            <button class="choice btn btn-default active" type="button" data-choice="0">@Global.LogsList</button>
+            <button class="choice btn btn-default" type="button" data-choice="1">@Global.LogsOccurences</button>
+        </div>
+        @Html.CompressedPartial("_PeriodToolbar")
+    </div>
+</section>
+@Html.CompressedPartial("_AllLogs")
+@Html.CompressedPartial("_Occurences")

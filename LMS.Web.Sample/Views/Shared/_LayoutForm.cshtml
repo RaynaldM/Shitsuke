@@ -1,0 +1,38 @@
+﻿@using aspnet_mvc_helpers
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section head
+{
+    @Html.Css("~/content/form.css")
+    @RenderSection("head", false)
+}
+@section scripts
+{
+    @Html.JQueryVal()
+    @Html.JavaScript("~/scripts/FormBundle")
+    @RenderSection("scripts", false)
+}
+@section PageReady
+{
+    @RenderSection("PageReady", false)
+}
+<div id="form-menu" class="sticky-menu">
+    <div class="container"></div>
+    <h4 class="col-md-5">@RenderSection("menutitle", false)</h4>
+    <div class="col-md-3">@RenderSection("menumidle", false)</div>
+    <div class="col-md-4">
+
+        <div>
+          @*  @Html.ActionLink("Back to List", "Index")*@
+        </div>
+
+        @* todo : en faire un composant parametrable*@
+        <input type="submit" form="form0" value="Save" class="btn btn-success"/>
+    </div>
+</div>
+<div class="form-wrapper">
+    @RenderBody()
+</div>

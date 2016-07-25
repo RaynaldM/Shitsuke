@@ -1,0 +1,89 @@
+﻿@using LMS.Resources
+<script id="fulllog-template" type="text/x-handlebars-template">
+    <div class="col-md-8">
+        <h4 class="{{errorLevelClass}}">{{errorLevelText}}</h4>
+        <h5>{{Type}}</h5>
+        <p>{{Message}}</p>
+    </div>
+    <ul class="list-unstyled col-md-4">
+        <li>
+            @Global.LogId
+            <span>
+                {{Id}}
+            </span>
+        </li>
+        <li>
+            @Global.LogApplication
+            <span>
+                {{Applicationid}}
+            </span>
+        </li>
+        <li>
+            @Global.LogCreationDate
+            <span>
+                {{JsonDateToLocaleString Creationdate}}
+            </span>
+        </li>
+    </ul>
+    <div class="col-md-12">
+        <hr />
+    </div>
+    <div class="col-md-9">
+        <label>@Global.LogDetail</label>
+        <p class="block"><code>{{Detail}}</code></p>
+        <label>@Global.LogSource</label>
+        <p class="block">{{Source}}</p>
+        <label>@Global.LogSql</label>
+        <p class="block">{{SQL}}</p>
+    </div>
+    <div class="col-md-3 context">
+        <h5>@Global.LogWeb</h5>
+        <label>@Global.LmsUrl</label>
+        <p>{{Url}}</p>
+        <label>@Global.LogStatusCode</label>
+        <p>{{Statuscode}}</p>
+        <label>@Global.LogHttpMethod</label>
+        <p>{{Httpmethod}}</p>
+
+    </div>
+    <div class="col-md-3 context">
+        <h5>@Global.LogContext</h5>
+        <label>@Global.LogMachine</label>
+        <p>{{Machinename}}</p>
+        <label>@Global.LogHost</label>
+        <p>{{Host}}</p>
+        <label>@Global.LogIpAddress</label>
+        <p>{{Ipaddress}}</p>
+    </div>
+</script>
+
+
+@*
+
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Errorlevel)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Errorlevel)
+            </dd>
+
+
+
+
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Sql)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Sql)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>*@

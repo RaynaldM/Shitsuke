@@ -1,0 +1,51 @@
+﻿@using aspnet_mvc_helpers
+@using LMS.Resources
+
+@section Head{
+    @Html.Css("~/content/homeindex.css")
+}
+@section scripts{
+    @Html.JavaScript("~/Scripts/jquery.signalR-2.2.0")
+    <script src="/signalr/hubs"></script>
+    @Html.TypeScript("~/Typescripts/HomeIndex.ts")
+    <script>
+        window.CurrentBasePage = new HomeIndex();
+    </script>
+}
+@section wrapperbarbutton
+{
+    <a href="@Url.Action("login", "Account" )" title="@Account.LoginToShitsuke" id="loginlink" class="pull-right" aria-label="Left Align">
+        <img src="~/Images/identify.png" alt="@Account.Login">
+    </a>
+}
+<div class="row" id="logo-line">
+    <div id="logo-block">
+        <div id="logo-img" class="text-center"><span id="heart-sr" class="glyphicon glyphicon-heart lead hidden" aria-hidden="true"></span></div>
+        <div id="logo-baseline" class="text-center">
+            @Global.HomeShitsukeSummary
+            <small>
+                @Global.HomeShitsukeSummaryMore&hellip;
+            </small>
+        </div>
+    </div>
+</div>
+<div id="monitor" class="row hidden">
+    <div class="col-md-4">
+        <div class="h1 center" id="appcount">...</div>
+        <div class="center small">@Global.HomeActiveApplications</div>
+    </div>
+    <div class="col-md-4">
+        <div class="h1 center" id="usrcount">...</div>
+        <div class="center small">@Global.HomeOnlineUsers</div>
+    </div>
+    <div class="col-md-4">
+        <div class="h1 center" id="pagecount">...</div>
+        <div class="center small">@Global.HomeHintedPages</div>
+    </div>
+</div>
+<div id="footer" class="row">
+    <div class="col-md-2 col-md-offset-5 hidden-xs text-center pull-bottom">
+        <img src="~/Images/shitsuke_logo45_red.png" alt="Logo Shitsuke">
+    </div>
+</div>
+

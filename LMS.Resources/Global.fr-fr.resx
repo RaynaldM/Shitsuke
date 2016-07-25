@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ApplicationsClickToSelect" xml:space="preserve">
+    <value>Cliquer pour sélectionner</value>
+  </data>
+  <data name="ApplicationsExplanation" xml:space="preserve">
+    <value>Les applications proviennent de l'analyse des ping utilisateurs et des applications connues.</value>
+  </data>
+  <data name="ApplicationsFirstPing" xml:space="preserve">
+    <value>1er ping :</value>
+  </data>
+  <data name="ApplicationsLastPing" xml:space="preserve">
+    <value>Dernier ping :</value>
+  </data>
+  <data name="ApplicationsManagement" xml:space="preserve">
+    <value>Gestion d'applications</value>
+  </data>
+  <data name="ApplicationsNoPing" xml:space="preserve">
+    <value>Aucune application, aucun ping d'utilisateurs &gt; Vérifiez si votre serveur est accessible</value>
+  </data>
+  <data name="ApplicationsRegistered" xml:space="preserve">
+    <value>App. actives et enregistrées</value>
+  </data>
+  <data name="ApplicationsSelectAll" xml:space="preserve">
+    <value>Tout sélectionner</value>
+  </data>
+  <data name="DashboardApplicationCode" xml:space="preserve">
+    <value>Code application</value>
+  </data>
+  <data name="DashboardApps" xml:space="preserve">
+    <value>Application</value>
+  </data>
+  <data name="DashboardException" xml:space="preserve">
+    <value>Exception</value>
+  </data>
+  <data name="Feedbacks" xml:space="preserve">
+    <value>Feedbacks</value>
+  </data>
+  <data name="Logs" xml:space="preserve">
+    <value>Logs</value>
+  </data>
+  <data name="DashboardLogsByType" xml:space="preserve">
+    <value>Logs par type</value>
+  </data>
+  <data name="DashboardLogsOnLast30min" xml:space="preserve">
+    <value>depuis 30 minutes</value>
+  </data>
+  <data name="DashboardLogsReceived" xml:space="preserve">
+    <value>Logs reçues</value>
+  </data>
+  <data name="DashboardMonitoring" xml:space="preserve">
+    <value>Surveillance</value>
+  </data>
+  <data name="DashboardMonitoringHintedPagesHistory" xml:space="preserve">
+    <value>Hist. pages affichées</value>
+  </data>
+  <data name="DashboardMonitoringInstantPagesLoaded" xml:space="preserve">
+    <value>Pages instantanées chargées (10s)</value>
+  </data>
+  <data name="DashboardMonitoringOnLast5min" xml:space="preserve">
+    <value>depuis 5 minutes</value>
+  </data>
+  <data name="DashboardMonitoringOnlineUsers" xml:space="preserve">
+    <value>Utilisateurs connectés</value>
+  </data>
+  <data name="DashboardMonitoringOnlineUsersHistory" xml:space="preserve">
+    <value>Hist. utilisateurs connectés</value>
+  </data>
+  <data name="FeedbackNew" xml:space="preserve">
+    <value>Nouveau</value>
+  </data>
+  <data name="LmsNoData" xml:space="preserve">
+    <value>Aucune donnée</value>
+  </data>
+  <data name="DashboardFeedbackNo" xml:space="preserve">
+    <value>Aucun feedback</value>
+  </data>
+  <data name="HomeActiveApplications" xml:space="preserve">
+    <value>Applications actives</value>
+  </data>
+  <data name="FeedbackOpen" xml:space="preserve">
+    <value>Ouvert</value>
+  </data>
+  <data name="HomeShitsukeSummaryMore" xml:space="preserve">
+    <value>et plus</value>
+  </data>
+  <data name="HomeShitsukeSummary" xml:space="preserve">
+    <value>Services de logs et de surveillance</value>
+  </data>
+  <data name="DashboardHomePage" xml:space="preserve">
+    <value>Page d'accueil</value>
+  </data>
+  <data name="HomeOnlineUsers" xml:space="preserve">
+    <value>Utilisateurs connectés</value>
+  </data>
+  <data name="HomeHintedPages" xml:space="preserve">
+    <value>Pages affichées</value>
+  </data>
+  <data name="HomeAbout" xml:space="preserve">
+    <value>A propos de</value>
+  </data>
+  <data name="DashboardUnansweredFeedback" xml:space="preserve">
+    <value>Commentaires sans réponse</value>
+  </data>
+  <data name="DashboardTime" xml:space="preserve">
+    <value>Heure</value>
+  </data>
+  <data name="DashboardReceivedLogsHistory" xml:space="preserve">
+    <value>Hist. logs reçues</value>
+  </data>
+  <data name="ApplicationsRegisteredTitle" xml:space="preserve">
+    <value>Applications actives et enregistrées</value>
+  </data>
+  <data name="ApplicationsSelectAllTitle" xml:space="preserve">
+    <value>Sélectionne toutes les applications</value>
+  </data>
+  <data name="DashboardFeedbackTitle" xml:space="preserve">
+    <value>Affiche la liste des feedbacks</value>
+  </data>
+  <data name="DashboardMonitoringHintedPagesHistoryTitle" xml:space="preserve">
+    <value>Historique des pages affichées</value>
+  </data>
+  <data name="DashboardMonitoringOnlineUsersHistoryTitle" xml:space="preserve">
+    <value>Historique des utilisateurs connectés</value>
+  </data>
+  <data name="DashboardReceivedLogsHistoryTitle" xml:space="preserve">
+    <value>Historique des logs reçues</value>
+  </data>
+  <data name="ErrorBackHome" xml:space="preserve">
+    <value>Retour à l'accueil</value>
+  </data>
+  <data name="ErrorHttp404" xml:space="preserve">
+    <value>404 Non Trouvé</value>
+  </data>
+  <data name="ErrorPageNotFound" xml:space="preserve">
+    <value>Désolé, cette page n'existe pas</value>
+  </data>
+  <data name="Feedback" xml:space="preserve">
+    <value>Feedback</value>
+  </data>
+  <data name="FeedbackAll" xml:space="preserve">
+    <value>Tous</value>
+  </data>
+  <data name="FeedbackApplication" xml:space="preserve">
+    <value>Application :</value>
+  </data>
+  <data name="FeedbackBug" xml:space="preserve">
+    <value>Bug</value>
+  </data>
+  <data name="FeedbackClose" xml:space="preserve">
+    <value>Fermé</value>
+  </data>
+  <data name="LmsCreationDate" xml:space="preserve">
+    <value>Date Création</value>
+  </data>
+  <data name="FeedbackDetailId" xml:space="preserve">
+    <value>Détail Feedback #</value>
+  </data>
+  <data name="LmsId" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="FeedbackList" xml:space="preserve">
+    <value>Feedbacks</value>
+  </data>
+  <data name="LmsMessage" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="FeedbackPage" xml:space="preserve">
+    <value>Page :</value>
+  </data>
+  <data name="FeedbackQuestion" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="FeedbackStatus" xml:space="preserve">
+    <value>Statut</value>
+  </data>
+  <data name="LmsType" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="FeedbackUser" xml:space="preserve">
+    <value>Utilisateur :</value>
+  </data>
+  <data name="FeedbackUserWrote" xml:space="preserve">
+    <value>L'utilisateur a  écrit :</value>
+  </data>
+  <data name="StatBrowserName" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="LmsByPeriodTo" xml:space="preserve">
+    <value>par période jusqu'au </value>
+  </data>
+  <data name="LmsCount" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="StatHinted" xml:space="preserve">
+    <value>Statistiques pages</value>
+  </data>
+  <data name="StatHintedAverage" xml:space="preserve">
+    <value>Moyenne</value>
+  </data>
+  <data name="StatHintedMax" xml:space="preserve">
+    <value>Max</value>
+  </data>
+  <data name="StatHintedPagesOnLast" xml:space="preserve">
+    <value>Pages depuis </value>
+  </data>
+  <data name="StatHintedShort" xml:space="preserve">
+    <value>Suggestions</value>
+  </data>
+  <data name="StatHintedTopPages" xml:space="preserve">
+    <value>Meilleures pages</value>
+  </data>
+  <data name="StatHintedTotal" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="StatHintedUsersOnLast" xml:space="preserve">
+    <value>Utilisateurs depuis </value>
+  </data>
+  <data name="StatPercentage" xml:space="preserve">
+    <value>% du total</value>
+  </data>
+  <data name="StatScreenSize" xml:space="preserve">
+    <value>Résolution</value>
+  </data>
+  <data name="StatTechnoAnalysis" xml:space="preserve">
+    <value>Technologies analysées sur la période</value>
+  </data>
+  <data name="StatTechnoBrowserType" xml:space="preserve">
+    <value>Navigateur</value>
+  </data>
+  <data name="StatTechnoScreen" xml:space="preserve">
+    <value>Ecran</value>
+  </data>
+  <data name="StatTecnoOs" xml:space="preserve">
+    <value>OS</value>
+  </data>
+  <data name="StatTopPagesHits" xml:space="preserve">
+    <value>chargés</value>
+  </data>
+  <data name="DashboardLogsTitle" xml:space="preserve">
+    <value>Affiche la liste des logs</value>
+  </data>
+  <data name="DashboardMonitoringTitle" xml:space="preserve">
+    <value>Affiche la liste des statistiques</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Erreur</value>
+  </data>
+  <data name="ErrorNullException" xml:space="preserve">
+    <value>L'exception est Null</value>
+  </data>
+  <data name="ErrorOccured" xml:space="preserve">
+    <value>Une erreur s'est produite lors du traitement de votre demande</value>
+  </data>
+  <data name="ErrorPage" xml:space="preserve">
+    <value>Page d'erreur</value>
+  </data>
+  <data name="ErrorReportedToAdmin" xml:space="preserve">
+    <value>Désolé, l'erreur a été reporté dans l'administrateur d'application</value>
+  </data>
+  <data name="FeedbackId" xml:space="preserve">
+    <value>Feedback #</value>
+  </data>
+  <data name="LmsLevel" xml:space="preserve">
+    <value>Niveau</value>
+  </data>
+  <data name="LmsUrl" xml:space="preserve">
+    <value>Url</value>
+  </data>
+  <data name="Lockout" xml:space="preserve">
+    <value>Verrouillé.</value>
+  </data>
+  <data name="LockoutAccountLocked" xml:space="preserve">
+    <value>Ce compte a été verrouillé, veuillez réessayer.</value>
+  </data>
+  <data name="LogApplication" xml:space="preserve">
+    <value>Application :</value>
+  </data>
+  <data name="LogCode" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="LogContext" xml:space="preserve">
+    <value>Contexte</value>
+  </data>
+  <data name="LogCreationDate" xml:space="preserve">
+    <value>Date Création :</value>
+  </data>
+  <data name="LogDetail" xml:space="preserve">
+    <value>Détail</value>
+  </data>
+  <data name="LogHost" xml:space="preserve">
+    <value>Serveur</value>
+  </data>
+  <data name="LogHttpMethod" xml:space="preserve">
+    <value>Méthode Http</value>
+  </data>
+  <data name="LogId" xml:space="preserve">
+    <value>ID :</value>
+  </data>
+  <data name="LoginChangePassword" xml:space="preserve">
+    <value>Cliquer pour changer votre mot de passe</value>
+  </data>
+  <data name="LogIpAddress" xml:space="preserve">
+    <value>Adresse IP</value>
+  </data>
+  <data name="LogMachine" xml:space="preserve">
+    <value>Machine</value>
+  </data>
+  <data name="LogsAnalysis" xml:space="preserve">
+    <value>Analyse de logs</value>
+  </data>
+  <data name="LogsDetail" xml:space="preserve">
+    <value>Détail log</value>
+  </data>
+  <data name="LogsFirstTime" xml:space="preserve">
+    <value>1ère fois</value>
+  </data>
+  <data name="LogsHashCode" xml:space="preserve">
+    <value>Hash code de la log</value>
+  </data>
+  <data name="LogsLastDate" xml:space="preserve">
+    <value>Dernière date</value>
+  </data>
+  <data name="LogsLastTime" xml:space="preserve">
+    <value>Dernière fois</value>
+  </data>
+  <data name="LogsList" xml:space="preserve">
+    <value>Liste</value>
+  </data>
+  <data name="LogsMin" xml:space="preserve">
+    <value>logs</value>
+  </data>
+  <data name="LogsNoData" xml:space="preserve">
+    <value>Aucune donnée pour cette log - ceci est une log unique</value>
+  </data>
+  <data name="LogsOccurence" xml:space="preserve">
+    <value>Occurence</value>
+  </data>
+  <data name="LogsOccurences" xml:space="preserve">
+    <value>Occurences</value>
+  </data>
+  <data name="LogSource" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="LogSql" xml:space="preserve">
+    <value>SQL</value>
+  </data>
+  <data name="LogStatusCode" xml:space="preserve">
+    <value>Code statut</value>
+  </data>
+  <data name="LogWeb" xml:space="preserve">
+    <value>Web</value>
+  </data>
+  <data name="PeriodChooseDate" xml:space="preserve">
+    <value>Choisir Date</value>
+  </data>
+  <data name="PeriodChoosePeriod" xml:space="preserve">
+    <value>Choisir Période</value>
+  </data>
+  <data name="PeriodLastDay" xml:space="preserve">
+    <value>Hier</value>
+  </data>
+  <data name="PeriodLastMonth" xml:space="preserve">
+    <value>Mois dernier</value>
+  </data>
+  <data name="PeriodLastWeek" xml:space="preserve">
+    <value>Semaine dernière</value>
+  </data>
+  <data name="SidebarApplicationsManagement" xml:space="preserve">
+    <value>Gestion d'applications</value>
+  </data>
+  <data name="SidebarDashboard" xml:space="preserve">
+    <value>Tableaux de bord</value>
+  </data>
+  <data name="SidebarFeedbacksList" xml:space="preserve">
+    <value>Feedbacks</value>
+  </data>
+  <data name="SidebarLogsList" xml:space="preserve">
+    <value>Logs</value>
+  </data>
+  <data name="SidebarMyOwnExceptions" xml:space="preserve">
+    <value>Mes exceptions</value>
+  </data>
+  <data name="SidedarHintedStatistics" xml:space="preserve">
+    <value>Statistiques</value>
+  </data>
+</root>

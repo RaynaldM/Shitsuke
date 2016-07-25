@@ -1,0 +1,78 @@
+﻿//@import "bootstrap.darkly\variables.less";
+//@import "bootstrap.flatly\variables.less";
+//@import "bootstrap.simplex\variables.less";
+@import "bootstrap.paper\variables.less";
+//@import "bootstrap.cosmo\variables.less";
+
+// si la font de bouton ne s'affiche pas bien
+//    essayer ./ ou ../
+
+@icon-font-path: "../fonts/";
+
+@brand-primary-lighter: lighten(@brand-primary,60%);
+
+@brand-primary-light: lighten(@brand-primary,20%);
+@brand-success-light: lighten(@brand-success,20%);
+@brand-info-light: lighten(@brand-info,20%);
+@brand-warning-light: lighten(@brand-warning,20%);
+@brand-danger-light: lighten(@brand-danger,20%);
+
+
+@brand-primary-dark: darken(@brand-primary,20%);
+@brand-success-dark: darken(@brand-success,20%);
+@brand-info-dark: darken(@brand-info,5%);
+@brand-warning-dark: darken(@brand-warning,20%);
+@brand-danger-dark: darken(@brand-danger,20%);
+
+@brand-info-darker: darken(@brand-info,20%);
+
+
+@font-size-xsmall: ceil((@font-size-base * 0.65)); // ~12px
+
+.allHeight(@height: 100%) {
+    .minHeight(@height);
+    max-height: @height;
+}
+
+.minHeight(@height: 100%) {
+    height: @height;
+    min-height: @height;
+}
+
+.allHeightOverflowHidden(@height: 100%) {
+    .allHeight(@height);
+    overflow-y: hidden;
+}
+
+.allWidth(@width: 100%) {
+    width: @width;
+    max-width: @width;
+    min-width: @width;
+}
+
+.allWidthOverflowHidden(@height: 100%) {
+    .allWidth(@height);
+    overflow-x: hidden;
+}
+
+.touchAction() {
+    //https://msdn.microsoft.com/fr-fr/library/hh772044%28v=vs.85%29.aspx
+    -ms-touch-action: auto;
+    touch-action: auto;
+}
+
+.touchActionScroll() {
+    .touchAction();
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: auto;
+    // https://msdn.microsoft.com/en-us/library/hh772034%28v=vs.85%29.aspx
+    -ms-overflow-style: auto;
+    -ms-scroll-rails: railed;
+    -ms-content-zooming: none;
+}
+
+.touchActionScrollY() {
+    .touchActionScroll();
+    overflow-y: auto;
+    overflow-x: hidden;
+}

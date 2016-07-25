@@ -1,0 +1,26 @@
+﻿@using LMS.Resources
+<script id="feedback-template" type="text/x-handlebars-template">
+    {{#if this}}
+    <div class="list-group">
+        {{#each this}}
+        <a class="list-group-item" href="#" data-id="{{Id}}" id="fd-{{Id}}" title="@Global.FeedbackId{{Id}}">
+            <h6 class="list-group-item-heading">
+                <i class="fa  {{#ifCond Type '===' 0 }}fa-bug text-danger{{/ifCond}}
+                   {{#ifCond Type '===' 1 }}fa-lightbulb-o text-warning{{/ifCond}}
+                   {{#ifCond Type '===' 2 }}fa-question text-success{{/ifCond}}"></i>
+                &nbsp; {{Appcode}}&nbsp;-&nbsp;{{Pageid}}
+            </h6>
+            <p class="list-group-item-text">{{reduce Comments 200}}</p>
+            <span class="timeago" data-timeago="{{Created}}"></span>
+            {{#if HaveScreenshot}}
+            <span class="pull-right">
+                <i class="fa fa-paperclip"></i>
+            </span>
+            {{/if}}
+        </a>
+        {{/each}}
+    </div>
+    {{else}}
+    <h5 class="text-center text-muted">@Global.DashboardFeedbackNo</h5>
+    {{/if}}
+</script>

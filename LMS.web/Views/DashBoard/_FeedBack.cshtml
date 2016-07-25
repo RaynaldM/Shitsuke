@@ -1,0 +1,20 @@
+﻿@using LMS.Resources
+<div class="row">
+    <h2 class="h4">
+        @Global.Feedbacks
+        &nbsp;<a class="small" href="@Url.Action("Index", "Feedback")" title="@Global.DashboardFeedbackTitle">
+            <i class="fa fa-list-alt"></i>
+        </a>
+    </h2>
+    <div class="col-md-6">
+        <div class="center">@Global.FeedbackNew</div>
+        <h2 id="new-feedback" class="center">...</h2>
+    </div>
+    <div class="col-md-6">
+        <div class="center">@Global.FeedbackOpen</div>
+        <h2 id="open-feedback" class="center">...</h2>
+    </div>
+</div>
+<div class="row">
+    <div id="feedback-list"></div>
+</div>

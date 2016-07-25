@@ -1,0 +1,31 @@
+﻿@using LMS.Resources
+<section class="row">
+    <div class="col-md-4 col-sm-6 col-xs-12">
+        <h6>@Global.StatHintedUsersOnLast&nbsp; <span class="lastperiod"></span></h6>
+        <div class="col-md-3 col-xs-3">
+            <small class="text-muted">@Global.StatHintedMax</small>
+            <h5 id="max-usr"></h5>
+            <small class="text-muted">@Global.StatHintedTotal</small>
+            <h5 id="sum-usr"></h5>
+            <small class="text-muted">@Global.StatHintedAverage</small>
+            <h5 id="avg-usr"></h5>
+        </div>
+        <div id="graph-users" class="col-md-9 col-xs-9"></div>
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12">
+        <h6>@Global.StatHintedPagesOnLast&nbsp; <span class="lastperiod"></span></h6>
+        <div id="resume-pages" class="col-md-3 col-xs-3">
+            <small class="text-muted">@Global.StatHintedMax</small>
+            <h5 id="max-page"></h5>
+            <small class="text-muted">@Global.StatHintedTotal</small>
+            <h5 id="sum-page"></h5>
+            <small class="text-muted">@Global.StatHintedAverage</small>
+            <h5 id="avg-page"></h5>
+        </div>
+        <div id="graph-pages" class="col-md-9 col-xs-9"></div>
+    </div>
+    <div class="col-md-4 col-sm-12">
+        <h6>@Global.StatHintedTopPages</h6>
+        <div id="list-pages"></div>
+    </div>
+</section>

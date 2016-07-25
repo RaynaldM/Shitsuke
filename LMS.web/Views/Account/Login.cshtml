@@ -1,0 +1,51 @@
+﻿@using aspnet_mvc_helpers
+@using LMS.web.Models
+@using LMS.Resources
+@model LoginViewModel
+@{
+    ViewBag.Title = Account.LoginToShitsuke;
+}
+@section Head{
+    @Html.Css("~/content/homeindex.css")
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Html.JavaScript("~/Scripts/FormBundle")
+}
+<div id="logo-line" class="row">
+    <section id="loginForm" class="col-md-offset-3 col-md-6 col-xs-offset-1 col-xs-10">
+        @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl },
+                FormMethod.Post, new { @class = "form", role = "form", id = "login-form" }))
+        {
+            <div class="center">
+                <img src="~/Images/identify.png" alt="@Account.LoginIdentifyYourself" style="margin-bottom: 20px;margin-top:-25px">
+            </div>
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(m => m.Email, new { @class = "control-label" })
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Password, new { @class = "control-label" })
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                <div class="col-md-6">
+                    @Html.BootStrapCheckBoxFor(m => m.RememberMe)
+                </div>
+                <div class="col-md-6 text-right">
+                    <input type="submit" value="@Account.Login" class="btn btn-primary" />
+                </div>
+            </div>
+        }
+    </section>
+</div>
+
+<div id="footer" class="row">
+    <div class="col-md-2 col-md-offset-5 hidden-xs  text-center pull-bottom">
+        <img src="~/Images/shitsuke_logo45_red.png" alt="Logo Shitsuke">
+    </div>
+</div>

@@ -1,0 +1,442 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LMS.web</name>
+    </assembly>
+    <members>
+        <member name="T:LMS.web.Api.FeedbackController">
+            <summary>
+            Web Api controller for feedback
+            </summary>
+        </member>
+        <member name="M:LMS.web.Api.FeedbackController.Post(LMS.web.Models.FeedbackApiModel)">
+            <summary>
+            Adda feedback from a user
+            </summary>
+            <param name="feedback">Feedback model</param>
+            <returns>Http Status (usualy Ok)</returns>
+        </member>
+        <member name="M:LMS.web.Api.FeedbackController.ResumeList(System.String,System.Int32)">
+            <summary>
+            Get the feedback list on an app
+            </summary>
+            <param name="id">Application code (* = all)</param>
+            <param name="count">Number of rows to retrieve (default : 5)</param>
+            <returns>Metrics and list</returns>
+        </member>
+        <member name="M:LMS.web.Api.FeedbackController.Get(System.Int64)">
+            <summary>
+            Get a feedback 
+            </summary>
+            <param name="id">Unique identifier of feedback</param>
+            <returns>A complete feedback</returns>
+        </member>
+        <member name="M:LMS.web.Api.FeedbackController.SetStatus(System.Int64,System.Byte)">
+            <summary>
+            Change a feedback status 
+            </summary>
+            <param name="id">Unique identifier of feedback</param>
+            <param name="newStatus">The new status to save</param>
+            <returns>True if done</returns>
+        </member>
+        <member name="M:LMS.web.Api.HintedStatsController.HintedUsers(System.String,System.Byte,System.DateTime)">
+            <summary>
+            Get the sum of hinted user on a period
+            </summary>
+            <param name="appid">Application code (* = all)</param>
+            <param name="period">0 : day, 1 : week, 2 : month (in future 3 : custom)</param>
+            <param name="enddate">End date of period</param>
+            <returns>Hinted users by gap</returns>
+        </member>
+        <member name="M:LMS.web.Api.HintedStatsController.HintedPages(System.String,System.Byte,System.DateTime)">
+            <summary>
+            Get the sum of hinted page in a period
+            </summary>
+            <param name="appid">Application code (* = all)</param>
+            <param name="period">0 : day, 1 : week, 2 : month (in future 3 : custom)</param>
+            <param name="enddate">End date of period</param>
+            <returns>Hinted users by gap</returns>
+        </member>
+        <member name="M:LMS.web.Api.HintedStatsController.TopPages(System.String,System.Byte,System.DateTime,System.Int32)">
+            <summary>
+            Get the sum of hinted page in a period
+            </summary>
+            <param name="appid">Application code (* = all)</param>
+            <param name="period">0 : day, 1 : week, 2 : month (in future 3 : custom)</param>
+            <param name="enddate">End date of period</param>
+            <param name="count">Number of rows to send</param>
+            <returns>Hinted users by gap</returns>
+        </member>
+        <member name="M:LMS.web.Api.HintedStatsController.TechnoStats(System.String,System.Byte,System.DateTime)">
+            <summary>
+            Get the resume of techno hinted stat in a period
+            </summary>
+            <param name="appid">Application code (* = all)</param>
+            <param name="period">0 : day, 1 : week, 2 : month (in future 3 : custom)</param>
+            <param name="enddate">End date of period</param>
+            <returns>Hinted users by gap</returns>
+        </member>
+        <member name="T:LMS.web.Api.LogsController">
+            <summary>
+            API controller used for receive and save logs
+            </summary>
+        </member>
+        <member name="M:LMS.web.Api.LogsController.Add(System.Object)">
+            <summary>
+            Add a user ping (from JS) in database
+            </summary>
+            <param name="log"></param>
+            <returns>Http Status (usualy Ok)</returns>
+        </member>
+        <member name="T:LMS.web.Api.MonitorController">
+            <summary>
+            Api for monitoring information
+            </summary>
+        </member>
+        <member name="M:LMS.web.Api.MonitorController.Ping(LMS.Services.Models.UserPing)">
+            <summary>
+            Add a user ping (from JS) in database
+            </summary>
+            <param name="ping">User Ping object</param>
+            <returns>Http Status (usualy Ok)</returns>
+        </member>
+        <member name="M:LMS.web.Api.TestController.Test">
+            <summary>
+            Api Boolean Test
+            </summary>
+            <returns>True</returns>
+        </member>
+        <member name="M:LMS.web.Api.TestController.Alive(System.String)">
+            <summary>
+            Api Echo Test
+            </summary>
+            <param name="id">My echo</param>
+            <returns>Alive + echo</returns>
+        </member>
+        <member name="T:LMS.web.SchedulerConfig">
+            <summary>
+            Main scheduler configuration
+            </summary>
+        </member>
+        <member name="M:LMS.web.SchedulerConfig.Register">
+            <summary>
+            Register all scheduler
+             > and stop them
+            </summary>
+        </member>
+        <member name="T:LMS.web.Unity.UnityConfig">
+            <summary>
+            Specifies the Unity configuration for the main container.
+            </summary>
+        </member>
+        <member name="M:LMS.web.Unity.UnityConfig.GetConfiguredContainer">
+            <summary>
+            Gets the configured Unity container.
+            </summary>
+        </member>
+        <member name="M:LMS.web.Unity.UnityConfig.RegisterTypes(Microsoft.Practices.Unity.IUnityContainer)">
+            <summary>Registers the type mappings with the Unity container.</summary>
+            <param name="container">The unity container to configure.</param>
+            <remarks>There is no need to register concrete types such as controllers or API controllers (unless you want to 
+            change the defaults), as Unity allows resolving a concrete type even if it was not previously registered.</remarks>
+        </member>
+        <member name="T:LMS.web.Unity.UnityFactory">
+            <summary>
+            Factory for injected class
+            </summary>
+        </member>
+        <member name="M:LMS.web.Unity.UnityFactory.GetLogger">
+            <summary>
+            Return Static Instance of Logger
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:LMS.web.Unity.UnityWebActivator">
+            <summary>Provides the bootstrapping for integrating Unity with ASP.NET MVC.</summary>
+        </member>
+        <member name="M:LMS.web.Unity.UnityWebActivator.Start">
+            <summary>Integrates Unity when the application starts.</summary>
+        </member>
+        <member name="M:LMS.web.Unity.UnityWebActivator.Shutdown">
+            <summary>Disposes the Unity container when the application is shut down.</summary>
+        </member>
+        <member name="T:LMS.web.Helpers.Api.WebApiBasicAuthorize">
+            <summary>
+            Very basic authorise mechanism 
+            todo : should be replace by a real oauth2 owin authorize
+            http://bitoftech.net/2014/06/01/token-based-authentication-asp-net-web-api-2-owin-asp-net-identity/ step 10
+             http://bitoftech.net/2015/02/16/implement-oauth-json-web-tokens-authentication-in-asp-net-web-api-and-identity-2/
+             http://www.asp.net/web-api/overview/security/individual-accounts-in-web-api
+            </summary>
+        </member>
+        <member name="P:LMS.web.Helpers.BaseController.CurrentApplicationCode">
+            <summary>
+            Get the current app choosen by user
+            </summary>
+        </member>
+        <member name="F:LMS.web.Helpers.BaseMvcApplication.Logger">
+            <summary>
+            Log Singleton Accessor
+            </summary>
+        </member>
+        <member name="P:LMS.web.Helpers.BaseMvcApplication.BasicBearer">
+            <summary>
+            Bearer for a basic/first level of security
+            </summary>
+        </member>
+        <member name="M:LMS.web.Helpers.BaseMvcApplication.ConfigureAntiForgeryTokens">
+            <summary>
+            Rename the Anti-Forgery cookie from "__RequestVerificationToken" to "L". 
+            </summary>
+        </member>
+        <member name="T:LMS.web.Helpers.LMSGridParams">
+            <summary>
+            Grid Param with specifics info form LMS
+            </summary>
+        </member>
+        <member name="P:LMS.web.Helpers.LMSGridParams.appId">
+            <summary>
+            Application Id
+            </summary>
+        </member>
+        <member name="T:LMS.web.Helpers.LogsGridParams">
+            <summary>
+            Grid Param with specifics info from LMS Logs grid
+            </summary>
+        </member>
+        <member name="P:LMS.web.Helpers.LogsGridParams.endDate">
+            <summary>
+            End of the period
+            </summary>
+        </member>
+        <member name="P:LMS.web.Helpers.LogsGridParams.period">
+            <summary>
+            period of query (0 - day, 1 - week 2 - month)
+            </summary>
+        </member>
+        <member name="T:LMS.web.Helpers.FeedbackGridParams">
+            <summary>
+            Grid Param with specifics info from LMS Feedbacks grid
+            </summary>
+        </member>
+        <member name="T:LMS.web.Helpers.Hub.BaseHub">
+            <summary>
+            SignalR Hub with a user counter
+            </summary>
+        </member>
+        <member name="P:LMS.web.Helpers.Hub.BaseHub.HaveUsers">
+            <summary>
+            Get true if there is a or more client
+            </summary>
+        </member>
+        <member name="T:LMS.web.Helpers.Hub.BaseScheduleHub">
+            <summary>
+            SignalR Hub base on a schedule heartbeat  
+            </summary>
+        </member>
+        <member name="T:LMS.web.Helpers.Scheduler.BaseJobs`1">
+            <summary>
+            Base Task
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:LMS.web.Helpers.Scheduler.BaseJobs`1.Service">
+            <summary>
+            Service Factory
+            </summary>
+        </member>
+        <member name="M:LMS.web.Helpers.Scheduler.BaseJobs`1.#ctor">
+            <summary>
+            ctor
+            </summary>
+        </member>
+        <member name="M:LMS.web.Helpers.Scheduler.BaseJobs`1.Execute">
+            <summary>
+            Execute task
+            </summary>
+        </member>
+        <member name="M:LMS.web.Helpers.Scheduler.BaseJobs`1.RealTask">
+            <summary>
+            Real Task to execute
+            </summary>
+        </member>
+        <member name="T:LMS.web.Hub.HomeMonitorHub">
+            <summary>
+            SignalR Hub for monitoring/ping information
+            </summary>
+        </member>
+        <member name="M:LMS.web.Hub.HomeMonitorHub.RefreshClientCount(LMS.Core.Domain.IHomeMonitoringHubModel)">
+            <summary>
+            Send updated information to clients
+            </summary>
+            <param name="clientModel">New info for client</param>
+            <returns></returns>
+        </member>
+        <member name="M:LMS.web.Hub.HomeMonitorHub.Hello">
+            <summary>
+            Juste an Hello test to check if connection is ok
+            </summary>
+        </member>
+        <member name="T:LMS.web.Hub.HomeMonitorHubService">
+            <summary>
+            Service to manipulate Monitoring Hub into scheduled task
+              Why server scheduled instead a client timer, because, each second, server compute stats 
+              for all clients vs all clients call server from browser and bomb it 
+            </summary>
+        </member>
+        <member name="F:LMS.web.Hub.HomeMonitorHubService.InContext">
+            <summary>
+            HubContext of T singleton
+            </summary>
+        </member>
+        <member name="P:LMS.web.Hub.HomeMonitorHubService.Context">
+            <summary>
+            HubContext of T singleton
+            </summary>
+        </member>
+        <member name="M:LMS.web.Hub.HomeMonitorHubService.RefreshClientCount(LMS.Core.Domain.IHomeMonitoringHubModel)">
+            <summary>
+            Send updated information to clients
+            </summary>
+            <param name="clientModel">New info for client</param>
+            <returns></returns>
+        </member>
+        <member name="M:LMS.web.Hub.HomeMonitorHubService.Hello">
+            <summary>
+            Juste an Hello test to check if connection is ok
+            </summary>
+        </member>
+        <member name="T:LMS.web.Hub.LogsHub">
+            <summary>
+            SignalR Hub for monitoring/ping information
+            </summary>
+        </member>
+        <member name="M:LMS.web.Hub.LogsHub.Refresh(System.Collections.Generic.IEnumerable{LMS.Core.Domain.ILoggingHubModel})">
+            <summary>
+            Send updated information to clients
+            </summary>
+            <param name="clientModel">New info for client</param>
+            <returns></returns>
+        </member>
+        <member name="M:LMS.web.Hub.LogsHub.Hello">
+            <summary>
+            Juste an Hello test to check if connection is ok
+            </summary>
+        </member>
+        <member name="T:LMS.web.Hub.LogsHubService">
+            <summary>
+            Service to manipulate Monitoring Hub into scheduled task
+              Why server scheduled instead a client timer, because, each second, server compute stats 
+              for all clients vs all clients call server from browser and bomb it 
+            </summary>
+        </member>
+        <member name="F:LMS.web.Hub.LogsHubService.InContext">
+            <summary>
+            HubContext of T singleton
+            </summary>
+        </member>
+        <member name="P:LMS.web.Hub.LogsHubService.Context">
+            <summary>
+            HubContext of T singleton
+            </summary>
+        </member>
+        <member name="M:LMS.web.Hub.LogsHubService.RefreshLogs(System.Collections.Generic.IEnumerable{LMS.Core.Domain.ILoggingHubModel})">
+            <summary>
+            Send updated information to clients
+            </summary>
+            <param name="clientModel">New info for client</param>
+            <returns></returns>
+        </member>
+        <member name="M:LMS.web.Hub.LogsHubService.Hello">
+            <summary>
+            Juste an Hello test to check if connection is ok
+            </summary>
+        </member>
+        <member name="T:LMS.web.Hub.MonitorHub">
+            <summary>
+            SignalR Hub for monitoring/ping information
+            </summary>
+        </member>
+        <member name="M:LMS.web.Hub.MonitorHub.Refresh(System.Collections.Generic.IEnumerable{LMS.Core.Domain.IMonitoringHubModel})">
+            <summary>
+            Send updated information to clients
+            </summary>
+            <param name="clientModel">New info for client</param>
+            <returns></returns>
+        </member>
+        <member name="M:LMS.web.Hub.MonitorHub.Hello">
+            <summary>
+            Juste an Hello test to check if connection is ok
+            </summary>
+        </member>
+        <member name="T:LMS.web.Hub.MonitorHubService">
+            <summary>
+            Service to manipulate Monitoring Hub into scheduled task
+              Why server scheduled instead a client timer, because, each second, server compute stats 
+              for all clients vs all clients call server from browser and bomb it 
+            </summary>
+        </member>
+        <member name="F:LMS.web.Hub.MonitorHubService.InContext">
+            <summary>
+            HubContext of T singleton
+            </summary>
+        </member>
+        <member name="P:LMS.web.Hub.MonitorHubService.Context">
+            <summary>
+            HubContext of T singleton
+            </summary>
+        </member>
+        <member name="M:LMS.web.Hub.MonitorHubService.RefreshClientCount(System.Collections.Generic.IEnumerable{LMS.Core.Domain.IMonitoringHubModel})">
+            <summary>
+            Send updated information to clients
+            </summary>
+            <param name="clientModel">New info for client</param>
+            <returns></returns>
+        </member>
+        <member name="M:LMS.web.Hub.MonitorHubService.Hello">
+            <summary>
+            Juste an Hello test to check if connection is ok
+            </summary>
+        </member>
+        <member name="T:LMS.web.Scheduler.Jobs.HomeMonitoringJobs">
+            <summary>
+            Scheduled Task for monitoring signalR hub
+            </summary>
+        </member>
+        <member name="M:LMS.web.Scheduler.Jobs.HomeMonitoringJobs.RealTask">
+            <summary>
+            Real Task to execute
+            </summary>
+        </member>
+        <member name="T:LMS.web.Scheduler.Jobs.LogsJobs">
+            <summary>
+            Scheduled Task for monitoring signalR hub
+            </summary>
+        </member>
+        <member name="M:LMS.web.Scheduler.Jobs.LogsJobs.RealTask">
+            <summary>
+            Real Task to execute
+            </summary>
+        </member>
+        <member name="T:LMS.web.Scheduler.Jobs.MonitoringJobs">
+            <summary>
+            Scheduled Task for monitoring signalR hub
+            </summary>
+        </member>
+        <member name="M:LMS.web.Scheduler.Jobs.MonitoringJobs.RealTask">
+            <summary>
+            Real Task to execute
+            </summary>
+        </member>
+        <member name="T:LMS.web.Scheduler.SchedulerRegistry">
+            <summary>
+            Registry the Monitor Hub Scheduler
+            </summary>
+        </member>
+        <member name="M:LMS.web.Scheduler.SchedulerRegistry.#ctor">
+            <summary>
+            ctor
+            </summary>
+        </member>
+    </members>
+</doc>

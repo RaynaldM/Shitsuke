@@ -1,0 +1,25 @@
+﻿@using aspnet_mvc_helpers
+@using LMS.Resources
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@Global.ErrorHttp404</title>
+    @Html.Css("~/content/app.css")
+</head>
+<body>
+    <div class="container body-content">
+        <div class="jumbotron">
+            <h1>
+                :( 404
+            </h1>
+            <p>@Global.ErrorPageNotFound</p>
+            <p>
+                <a class="btn btn-primary btn-lg" href="@Url.Action("Index", "Home")" role="button">@Global.ErrorBackHome</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

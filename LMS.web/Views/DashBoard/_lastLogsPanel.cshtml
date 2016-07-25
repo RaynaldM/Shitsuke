@@ -1,0 +1,36 @@
+﻿@using LMS.Resources
+<script id="lastlogs-template" type="text/x-handlebars-template">
+    {{#if this}}
+    <table id="logtable" class="table table-condensed table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    @Global.DashboardTime
+                </th>
+                <th>
+                    @Global.DashboardApps
+                </th>
+                <th>
+                    @Global.DashboardException
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each this}}
+            <tr title="{{Id}}">
+                <td><a href='/logs/detail/{{Id}}?type=id'>{{Id}}</a></td>
+                <td>{{JsonDateToLocaleString Date}}</td>
+                <td>{{App}}</td>
+                <td><strong>{{Type}}</strong>&nbsp;
+                {{Message}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    {{else}}
+    <div>@Global.LmsNoData</div>
+    {{/if}}
+</script>

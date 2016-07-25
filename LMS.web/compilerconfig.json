@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "Content/FeedbackIndex.css",
+    "inputFile": "Content/FeedbackIndex.less"
+  },
+  {
+    "outputFile": "Content/App.css",
+    "inputFile": "Content/App.less"
+  },
+  {
+    "outputFile": "Content/LogDetail.css",
+    "inputFile": "Content/LogDetail.less"
+  }
+]

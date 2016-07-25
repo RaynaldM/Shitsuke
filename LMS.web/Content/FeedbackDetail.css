@@ -1,0 +1,26 @@
+﻿#screenshot {
+  margin-top: 23px;
+}
+#screenshot-fg {
+  cursor: pointer;
+}
+.modal-footer {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+.modal-content {
+  height: 100%;
+}
+.modal-dialog {
+  height: 90%;
+  width: 90%;
+}
+.modal-body {
+  height: 89%;
+  padding-top: 0;
+}
+#screenshotzoom-img {
+  height: 100%;
+}
+/*# sourceMappingURL=FeedbackDetail.css.map */

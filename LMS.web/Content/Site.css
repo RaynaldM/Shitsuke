@@ -1,0 +1,81 @@
+﻿@-webkit-viewport {
+  width: device-width;
+}
+@-moz-viewport {
+  width: device-width;
+}
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+@viewport {
+  width: device-width;
+}
+.nodisp {
+  display: none;
+}
+.smalltitle {
+  padding-left: 20px;
+}
+.hoverButton,
+.hoverButtonMedium,
+.login-button {
+  color: #eeeeee;
+}
+.hoverButton:hover,
+.hoverButtonMedium:hover,
+.login-button:hover {
+  color: #666666;
+}
+.hoverButtonMedium,
+.login-button {
+  font-size: 24px;
+}
+.login-button {
+  margin-right: 20px;
+  margin-top: 12px;
+}
+#loginlink {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.center {
+  text-align: center;
+}
+#headLogo {
+  width: 45px;
+  height: 45px;
+  opacity: 1;
+  -moz-transition: opacity 0.7s;
+  -o-transition: opacity 0.7s;
+  -webkit-transition: opacity 0.7s;
+  transition: opacity 0.7s;
+  background: url(/Images/shitsuke_logo45_red.png) center center no-repeat;
+  margin: 0 auto 0 auto;
+  color: white;
+  padding-top: 10px;
+}
+#headLogo.collapsed {
+  opacity: 0;
+}
+#wrapper-bar {
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  height: 54px;
+}
+#wrapper-bar h1.h3 {
+  margin-top: 12px;
+}
+.ellispis {
+  max-width: 0;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/*# sourceMappingURL=Site.css.map */

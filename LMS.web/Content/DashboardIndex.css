@@ -1,0 +1,13 @@
+﻿#count-usrhisto,
+#count-logs {
+  margin-top: 0;
+  font-size: 72px;
+  color: #000000;
+}
+.ct-grey {
+  stroke: #bbbbbb;
+}
+a.small:hover {
+  color: #2196f3;
+}
+/*# sourceMappingURL=DashboardIndex.css.map */

@@ -1,0 +1,18 @@
+﻿@using LMS.Resources
+<script id="toppages-template" type="text/x-handlebars-template">
+    {{#if this}}
+    <table class="table table-condensed table-striped" style="width:100%">
+        <tbody>
+            {{#each this}}
+            <tr>
+                <td class="ellispis">{{Name}}</td>
+                <td class="ellispis">{{Value}} @Global.StatTopPagesHits</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    {{else}}
+    <div>@Global.LmsNoData</div>
+    {{/if}}
+</script>
+

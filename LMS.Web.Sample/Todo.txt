@@ -1,0 +1,28 @@
+﻿Faire un bundle form
+https://twitter.github.io/typeahead.js/examples/ < a voir autocomplete
+http://t00rk.github.io/bootstrap-material-datetimepicker/ 
+
+material form & composants
+http://fezvrasta.github.io/bootstrap-material-design/
+http://materializecss.com/forms.html
+http://www.material-ui.com/#/components/date-picker (model datepicker)
+http://mdbootstrap.com/components/forms/
+
+faire une sorte de vector
+https://github.com/danludwig/BeginCollectionItem
+
+faire un bunble grid
+http://www.jquery-bootgrid.com/Examples#data-api
+
+faire un bundle calendar
+https://github.com/Serhioromano/bootstrap-calendar
+https://github.com/timekit-io/booking-js
+
+Si necessaire Mettre en oeuvre un validator d'inscription
+https://visualstudiomagazine.com/articles/2016/02/01/customize-authentication.aspx
+
+Voir si possible des 404 et autres erreurs en static content (html)
+http://www.secretgeek.net/custom_errors_mvc
+
+ajouter Glimpse
+http://www.asp.net/mvc/overview/performance/profile-and-debug-your-aspnet-mvc-app-with-glimpse

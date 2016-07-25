@@ -1,0 +1,59 @@
+﻿@import "..\variables.less";
+
+/* Modal Slacker 
+    http://bootsnipp.com/snippets/featured/slacker-style-modal
+    */
+.modal-slacker {
+    width: 100%;
+  //  height: 100%;
+    margin: 0;
+
+    & .modal-header {
+        border-bottom: 0;
+
+        & .close {
+            color: #fff;
+            background-color: @brand-info;
+            /*border-color: @brand-info-dark;*/
+            opacity: 1;
+            padding: 10px 17px;
+            font-size: 27px;
+        }
+    }
+
+    & .modal-footer {
+        border-top: 0;
+    }
+
+    & .modal-content {
+        margin-top: 8%;
+        border-radius: 0;
+        border-left-width: 0;
+        border-right-width: 0;
+        height: 70%;
+        overflow: auto;
+    }
+
+
+    & .modal-title {
+        font-size: 34px;
+        font-weight: bold;
+    }
+}
+
+@media (min-width: 992px) {
+    .modal-slacker .modal-header,
+    .modal-slacker .modal-body,
+    .modal-slacker .modal-footer {
+        width: 900px;
+    }
+}
+
+@media (min-width: 768px) {
+    .modal-slacker .modal-header,
+    .modal-slacker .modal-body,
+    .modal-slacker .modal-footer {
+        width: 600px;
+        margin: 30px auto;
+    }
+}

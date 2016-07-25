@@ -1,0 +1,50 @@
+﻿@using aspnet_mvc_helpers
+@model HandleErrorInfo
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Error Page</title>
+    @Html.Css("~/content/app.css")
+</head>
+<body>
+    <div class="container body-content">
+        <div class="jumbotron">
+            <h1>
+                Error
+            </h1>
+            <p>
+                An error occured while processing your request
+            </p>
+            <p>
+                @if (Request.IsLocal)
+                {
+                    if (@Model != null && @Model.Exception != null)
+                    {
+                        <h4>@Model.Exception.Message</h4>
+                        <h6>Source : @Model.ControllerName / @Model.ActionName</h6>
+                        <h5>StackTrace</h5>
+                        <code>@Model.Exception.StackTrace</code>
+                    }
+                    else
+                    {
+                        <h3>Exception is Null</h3>
+                    }
+                }
+                else
+                {
+                    <h4>Sorry, the Error have been reported to the Application administrator</h4>
+                }
+            </p>
+            <p>
+                <a class="btn btn-primary btn-lg" href="@Url.Action("Index", "Home")" role="button">Back to home</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

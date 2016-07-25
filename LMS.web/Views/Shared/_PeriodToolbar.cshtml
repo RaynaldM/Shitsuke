@@ -1,0 +1,14 @@
+﻿@using LMS.Resources
+<div aria-label="@Global.PeriodChooseDate" role="toolbar" class="btn-toolbar pull-right">
+    <div aria-label="..." role="group" class="btn-group">
+        <button aria-label="Left Align" class="btn btn-primary" type="button" id="btncal" data-dtp="dtp_RmjkW" value="">
+            <span aria-hidden="true" class="glyphicon glyphicon-calendar"></span>
+            <span class="lib-date"></span>
+        </button>
+    </div>
+    <div aria-label="@Global.PeriodChoosePeriod" role="group" class="btn-group">
+        <button class="period btn btn-default active" type="button" data-choice="0">@Global.PeriodLastDay</button>
+        <button class="period btn btn-default" type="button" data-choice="1">@Global.PeriodLastWeek</button>
+        <button class="period btn btn-default" type="button" data-choice="2">@Global.PeriodLastMonth</button>
+    </div>
+</div>

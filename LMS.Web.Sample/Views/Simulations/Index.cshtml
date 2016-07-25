@@ -1,0 +1,20 @@
+﻿@using aspnet_mvc_helpers
+@{
+    ViewBag.Title = "Simulation";
+}
+@section scripts{
+    @Html.TypeScript("~/Typescripts/SimulationIndex.ts", true)
+    <script>
+        window.CurrentBasePage = new SimulationIndex();
+    </script>
+}
+<h2>@ViewBag.Title</h2>
+<div class="col-md-4">
+    <a id="sendexception" href="#" class="btn btn-lg btn-warning">Send 1 exception each second</a>
+    <a id="stopexception" href="#" class="btn btn-lg btn-danger hidden">Stop to Send exception</a>
+</div>
+<div class="col-md-4">
+    <a id="sendping" href="#" class="btn btn-lg btn-warning">Send 1 ping each 500 millisecond</a>
+    <a id="stopping" href="#" class="btn btn-lg btn-danger hidden">Stop to Send ping</a>
+</div>
+

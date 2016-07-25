@@ -1,0 +1,25 @@
+﻿@using aspnet_mvc_helpers
+@using LMS.web.Helpers
+@using LMS.Resources
+
+@if (Request.IsAuthenticated)
+{
+    var baseCtrl = ((BaseController)this.ViewContext.Controller);
+
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+    }
+    <li>
+        <a href="@Url.Action("ChangePassword", "Manage")" title="@Global.LoginChangePassword">
+            @Html.GravatarImage(baseCtrl.CurrentUser != null ? baseCtrl.CurrentUser.Email : "", 56, "blank", "img-circle img-profil", User.Identity.Name)
+            @*<span class="center"> @User.Identity.Name</span>*@
+        </a>
+    </li>
+    <li>
+        <a href="javascript:document.getElementById('logoutForm').submit()">
+            <i class="ace-icon fa fa-power-off"></i>
+            &nbsp;@Account.Logout
+        </a>
+    </li>
+}

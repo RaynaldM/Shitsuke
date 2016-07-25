@@ -1,0 +1,24 @@
+﻿@using aspnet_mvc_helpers
+@using LMS.Resources
+@{
+    ViewBag.Title = Global.LogsDetail;
+}
+@section Head{
+    @*@Html.Css("~/content/addons/chartist.css")*@
+    @Html.Css("~/content/LogDetail.css")
+}
+@section scripts{
+    @Html.CompressedPartial("_DetailLog")
+    @Html.CompressedPartial("_OccurenceData")
+    @*@Scripts.Render("~/bundles/graph")*@
+    @Html.JavaScript("~/Scripts/jquery.bootgrid.js")
+    @Html.TypeScript("~/Typescripts/LogDetail.ts")
+    <script>
+        window.CurrentBasePage = new LogDetail({id:@ViewBag.id,type:'@ViewBag.type'});
+    </script>
+}
+@section wrapperbar{
+    <h1 class="h3 col-md-11">@ViewBag.Title</h1>
+}
+<section id="full-log" class="col-md-9 well"></section>
+<section id="occurence-data" class="col-md-3"></section>

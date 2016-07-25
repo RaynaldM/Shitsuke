@@ -1,0 +1,50 @@
+﻿@import "Variables";
+
+@import "Addons/bootstrap-multiselect";
+
+// Theme standard
+// @import "Addons/bootstrap-datetimepicker-build";
+
+// theme paper/material
+@import "Addons/bootstrap-material-datetimepicker";
+
+// for datetimepicker
+.r-datetime {
+    width: @font-size-base*15;
+}
+//for date
+.r-date {
+    width: @font-size-base*9;
+}
+// for time
+.r-time {
+    width: @font-size-base*6;
+}
+
+.sticky-menu {
+    position: fixed;
+    top: @navbar-height;
+    left: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: @navbar-height;
+    background-color: @gray-lighter;
+
+    & .btn {
+        margin-top: 13px;
+    }
+
+    & h4 {
+        margin-top: 16px;
+    }
+}
+
+.form-wrapper {
+    padding-top: @navbar-height+22px;
+}
+
+.form-group-col {
+    margin-bottom: @form-group-margin-bottom;
+    margin-right: 0;
+    margin-left: 0;
+}

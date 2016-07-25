@@ -1,0 +1,36 @@
+﻿@using aspnet_mvc_helpers
+@{
+    ViewBag.Title = "Home Page";
+}
+@section scripts{
+    @Html.TypeScript("~/Typescripts/HomeIndex.ts", true)
+    <script>
+        window.CurrentBasePage = new HomeIndex();
+    </script>
+}
+
+<div class="jumbotron">
+    <h1>LMS - Shitsuke - Sample</h1>
+    <p class="lead">This apps goal is to show all interactions between an ASP.NET MVC 5 app (this) and the &quot;Log &amp; Monitoring Services&quot; : Shitsuke</p>
+    <p><a href="http://rayspiration.fr" target="_blank" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Elmah Page</h2>
+        <p>
+           Send some logs in Elmah, and a link to Elmah.axd
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("Index","Elmah")">Go&raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Simulations</h2>
+        <p>Simulate sending logs or ping to a ShitSuke Server.</p>
+        <p><a class="btn btn-default" href="@Url.Action("Index","Simulations")">Go&raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>

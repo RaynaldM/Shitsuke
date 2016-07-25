@@ -1,0 +1,57 @@
+﻿<link href="{root}/Content/feedback.min.css" rel="stylesheet">
+
+<div id="lms-report" class="panel">
+    <div class="panel-body ">
+        <button id="lms-close" type="button" class="close bclose">×</button>
+        <div class="panel-title"></div>
+        <h4>
+            {{FeedbackTellUsMore}}
+        </h4>
+        <form class="form report" method="post" enctype="application/x-www-form-urlencoded">
+            <input id="screenshot" name="screenshot" type="hidden" class="screen-uri">
+            <input id="appcode" name="appcode" type="hidden">
+            <input id="token" name="token" type="hidden">
+            <input id="userid" name="userid" type="hidden">
+            <input id="pageid" name="pageid" type="hidden">
+            <input id="browserinfo" name="browserinfo" type="hidden">
+
+            <div class="center-block text-center">
+                <label class="radio-inline">
+                    <input type="radio" name="feedbackType" id="inlineRadio2" value="1" checked="checked"> {{Feedback}}
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="feedbackType" id="inlineRadio3" value="2"> {{FeedbackQuestion}}
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="feedbackType" id="inlineRadio1" value="0"> {{FeedbackBug}}
+                </label>
+
+            </div>
+            <div>
+                <textarea required name="comment" class="form-control" placeholder={{FeedbackDetailReport}}></textarea>
+                <span class="screenshot pull-right"><i class="fa fa-camera cam" title={{FeedbackTakeScreenshot}}></i></span>
+            </div>
+            <div>
+                <input type="submit" class="btn btn-primary btn-block" value={{FeedbackSubmitReport}} />
+            </div>
+        </form>
+    </div>
+    <div class="loading text-center hidden">
+        <h2>{{FeedbackPleaseWait}}</h2>
+        <h2><i class="fa fa-refresh fa-spin"></i></h2>
+    </div>
+    <div class="reported text-center hidden">
+        <h2>{{FeedbackThankYou}}</h2>
+        <p>{{FeedbackReportSubmitted}}</p>
+        <div>
+            <button class="btn btn-success bclose">{{FeedbackClose}}</button>
+        </div>
+    </div>
+    <div class="failed text-center hidden">
+        <h2>{{FeedbackSaveFailed}}</h2>
+        <p>{{FeedbackReportFailded}}<br><br>{{FeedbackContactByMail}}</p>
+        <div class="clearfix">
+            <button class="btn btn-danger bclose">{{FeedbackClose}}</button>
+        </div>
+    </div>
+</div>

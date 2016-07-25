@@ -1,0 +1,28 @@
+﻿@using LMS.Resources
+<h2 class="h4">
+    @Global.DashboardMonitoring <small>&nbsp;
+        @Global.DashboardMonitoringOnLast5min &nbsp;<a class="small" href="@Url.Action("Index", "HintedStat")" title="@Global.DashboardMonitoringTitle">
+            <i class="fa fa-bar-chart"></i>
+        </a>
+    </small>
+
+</h2>
+<div class="row">
+    <div class="col-md-2 col-sm-4 col-xs-12">
+        <div class="center">@Global.DashboardMonitoringOnlineUsers</div>
+        <div class="center" id="count-usrhisto">...</div>
+    </div>
+    <div class="col-md-3 col-sm-4 col-xs-12">
+        <div class="center" title="@Global.DashboardMonitoringOnlineUsersHistoryTitle">@Global.DashboardMonitoringOnlineUsersHistory</div>
+        <div id="usr-histo"></div>
+    </div>
+    <div class="col-md-3 col-sm-4 col-xs-12">
+        <div class="center" title="@Global.DashboardMonitoringHintedPagesHistoryTitle">@Global.DashboardMonitoringHintedPagesHistory</div>
+        <div id="usr-page"></div>
+    </div>
+    <div class="col-md-4 col-sm-12 col-xs-12">
+        <div class="center">@Global.DashboardMonitoringInstantPagesLoaded</div>
+        <div id="usr-pageseconds"></div>
+    </div>
+</div>
+

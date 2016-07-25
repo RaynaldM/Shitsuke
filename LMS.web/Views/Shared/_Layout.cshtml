@@ -1,0 +1,121 @@
+﻿@using aspnet_mvc_helpers
+@using LMS.web.Helpers
+@{
+    var baseCtrl = ((BaseController)this.ViewContext.Controller);
+    var uid = baseCtrl.UserId;
+    var appCode = baseCtrl.CurrentApplicationCode;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="none" />
+    <meta name="author" content="Rayspiration">
+    <meta name="description" content="Shitsuke - Logs & Monitoring Services (and more) - @ViewBag.Title" />
+
+    <meta name="msapplication-TileImage" content="~/Images/Icons/ms-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="~/Images/Icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="~/Images/Icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/Images/Icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/Images/Icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/Images/Icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="~/Images/Icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="~/Images/Icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="~/Images/Icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/Images/Icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="~/Images/Icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/Images/Icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="~/Images/Icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Images/Icons/favicon-16x16.png">
+    <link rel="SHORTCUT ICON" type="image/x-icon" href="@Url.Content("~/favicon.ico")" />
+
+    <title>Shitsuke - Logs & Monitoring Services - @ViewBag.Title</title>
+    @Html.Css("~/content/app.css")
+    @* HTML5 shim, for IE6-8 support of HTML5 elements *@
+    @*voir pour https://github.com/paulmillr/es6-shim*@
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    @RenderSection("head", false)
+</head>
+<body>
+    <div id="wrapper">
+        <div class="row" id="wrapper-bar">
+            <div class="col-md-1">
+                @if (this.User.Identity.IsAuthenticated)
+                {
+                    <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+                        <span class="hamb-top"></span>
+                        <span class="hamb-middle"></span>
+                        <span class="hamb-bottom"></span>
+                    </button>
+                }
+            </div>
+            <div class="col-md-10 col-xs-11 text-center cut">
+                <!--[if lt IE 8]>
+                    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+                <![endif]-->
+                @RenderSection("wrapperbar", false)
+            </div>
+            <div class="col-md-1 col-xs-1">
+                @if (this.User.Identity.IsAuthenticated)
+                {
+                    <div id="headLogo" class="pull-right text-center">
+                        <span id="heart-sr" class="glyphicon glyphicon-heart lead hidden"></span>
+                    </div>
+                }
+                @RenderSection("wrapperbarbutton", false)
+            </div>
+        </div>
+        @if (User.Identity.IsAuthenticated)
+        {
+            @Html.CompressedPartial("_SideBar")
+        }
+        <div id="page-content-wrapper" class="container-fluid body-content">
+            @RenderBody()
+        </div>
+    </div>
+    @* /#wrapper *@
+    <div id="usual-modal" class="modal fade in" tabindex="-1" role="dialog" aria-hidden="false">
+        <div class="modal-dialog">
+            <div id="mcontent" class="modal-content">
+                @RenderSection("modal", false)
+            </div>
+        </div>
+    </div>
+    @Html.JQuery()
+    @Scripts.Render("~/bundles/bts")
+    @Html.ResourcesJS()
+    @Scripts.Render("~/bundles/app")
+    <script type="text/javascript">
+        window.PageParameters = {
+            uid: '@uid',
+            IsDebug: @Html.IsDebug().ToString().ToLower(),
+            cTag: '@HtmlExtensions.CacheTag',
+            currentApp: '@appCode',
+            language: navigator.language || navigator.systemLanguage || navigator.userLanguage || "en"
+        };
+    </script>
+    @RenderSection("scripts", false)
+    <script type="text/javascript">
+        $(document)
+            .ready(function() {
+                window.CurrentBasePage && window.CurrentBasePage.Ready();
+                @RenderSection("PageReady", false);
+            });
+    </script>
+    <script>
+        (function (n, t) { var r; if (typeof lms == "undefined" || window.lms === void 0 && n) { window.lms = n; var u = document, f = "script", i = u.createElement(f); i.type = "text/javascript"; i.src = n + "/scripts/embedlms.min.js"; i.async = !0; i.addEventListener("load", t, !1); r = u.getElementsByTagName(f)[0]; r.parentNode.insertBefore(i, r) } })
+            ("", function() {
+                return EmbedLms.Ping("Self",
+                    "3AC096D0-A1C2-E12C-1390-A8335801FDAB",'@uid');
+            });
+        //# sourceMappingURL=loader.min.js.map
+
+    </script>
+
+</body>
+</html>

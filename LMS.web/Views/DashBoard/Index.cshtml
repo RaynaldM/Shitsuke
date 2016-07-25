@@ -1,0 +1,28 @@
+﻿@using aspnet_mvc_helpers
+@using LMS.Resources
+
+@section Head{
+    @Html.Css("~/content/dashboardindex.css")
+    @Html.Css("~/content/addons/chartist.css")
+}
+@section scripts{
+    @Html.CompressedPartial("_LastLogsPanel")
+    @Html.CompressedPartial("_FeedBackListPanel")
+    @Scripts.Render("~/bundles/graph")
+    @Html.JavaScript("~/Scripts/jquery.signalR-2.2.0")
+    <script src="/signalr/hubs"></script>
+    @Html.TypeScript("~/Typescripts/DashBoardIndex.ts")
+    <script>
+        window.CurrentBasePage = new DashBoardIndex();
+    </script>
+}
+@section wrapperbar{
+    <h1 class="h3 col-md-11" title="@Global.DashboardApplicationCode" id="server-name">*</h1>
+}
+<div class="col-lg-9 col-md-12">
+    @Html.CompressedPartial("_Monitoring")
+    @Html.CompressedPartial("_Logging")
+</div>
+<div class="col-lg-3 col-md-12">
+    @Html.CompressedPartial("_FeedBack")
+</div>

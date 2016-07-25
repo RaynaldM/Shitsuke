@@ -1,0 +1,27 @@
+﻿@using LMS.Resources
+<script id="occurencedata-template" type="text/x-handlebars-template">
+    {{#if this}}
+    <h4>@Global.LogsOccurence &nbsp; <small title="@Global.LogsHashCode">[{{Hashcode}}]</small></h4>
+    <h2 class="text-center">{{Count}}  <small>logs</small></h2>
+    <div class="date-block">
+        <div class="col-md-5 date-p">
+            <h6>@Global.LogsFirstTime</h6>
+            <p class="text-center">{{JsonDateToLocaleDateString FirstTime}}</p>
+            <p class="text-center text-muted">{{JsonDateToLocaleTimeString FirstTime}}</p>
+            <small>{{JsonDateSince FirstTime}}</small>
+        </div>
+        <div class="col-md-2 date-arrow center"><i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i></div>
+        <div class="col-md-5 date-p">
+            <h6>@Global.LogsLastTime</h6>
+            <p class="text-center">{{JsonDateToLocaleDateString LastTime}}</p>
+            <p class="text-center text-muted">{{JsonDateToLocaleTimeString LastTime}}</p>
+            <small>{{JsonDateSince LastTime}}</small>
+        </div>
+    </div>
+    @*<div> Graph last hour</div>
+        <div> Graph last 24h</div>
+        <div> Graph last 7 days</div>*@
+    {{else}}
+    <h3 class="text-muted center ct-vertical">@Global.LogsNoData</h3>
+    {{/if}}
+</script>

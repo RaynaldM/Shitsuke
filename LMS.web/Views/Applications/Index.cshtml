@@ -1,0 +1,44 @@
+﻿@using aspnet_mvc_helpers
+@using LMS.Resources
+@{
+    ViewBag.Title = Global.ApplicationsManagement;
+}
+@section scripts{
+    <script id="apps-template" type="text/x-handlebars-template">
+        {{#if this}}
+        <div class="list-group">
+            {{#each this}}
+            <a href="#" class="list-group-item" data-code="{{name}}">
+                <span class="badge">{{count}}</span>
+                <h4 class="list-group-item-heading">{{name}}</h4>
+                <div class="list-group-item-text">
+
+                    @Global.ApplicationsFirstPing <span class="timeago" data-timeago="{{start}}"></span>&nbsp;|&nbsp;
+                    @Global.ApplicationsLastPing <span class="timeago" data-timeago="{{last}}"></span>
+                </div>
+            </a>
+            {{/each}}
+        </div>
+        {{else}}
+        <p class="help-block">
+            @Global.ApplicationsNoPing
+        </p>
+        {{/if}}
+    </script>
+    @Html.TypeScript("~/Typescripts/ApplicationsIndex.ts")
+    <script>
+        window.CurrentBasePage = new ApplicationIndex({ currentApp: '@ViewBag.currentApp' });
+    </script>
+}
+@section wrapperbar{
+    <h2>@ViewBag.Title</h2>
+}
+<div class="col-md-8 col-sm-12">
+    <h4 title="@Global.ApplicationsRegisteredTitle">@Global.ApplicationsRegistered&nbsp;<small></small></h4>
+    <div id="apps-list"></div>
+</div>
+<div class="col-md-4 col-sm-12 jumbotron">
+    <h5>@Global.ApplicationsClickToSelect</h5>
+    <p>@Global.ApplicationsExplanation</p>
+    <p><a id="allapps" class="btn btn-primary btn-lg" data-code="allapps" href="#" role="button" title="@Global.ApplicationsSelectAllTitle">@Global.ApplicationsSelectAll</a></p>
+</div>
