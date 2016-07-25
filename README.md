@@ -11,11 +11,13 @@ Shitsuke (躾, Upbringing) is the last S of 5S methology
     Shitsuke (躾, sustain) : do without being told
 [see more on 5S](https://en.wikipedia.org/wiki/5S_(methodology))
 
-With an integrated tools included a **Real-Time Dashboard** where you can see **online users**, **last exceptions** and **user feedbacks**, you are in a Shitsuke stream : 
-**become proactive and anticipate bugs from your applications, know your application loads and learn from your users**
+With integrated tools included in a **real-time dashboard** (i.e. with online users, simply errors and user feedback updates), you’ll be in a Shitsuke stream : 
+**proactively anticipating bugs from your applications, knowing your application load and learning from your users**
 
 
 ## Dashboard
 ![ScreenCopy 1](/ScreenShots/2.png "Dashboard") 
+## Online users statistics
+![ScreenCopy 1](/ScreenShots/3HintedStatistics.png "Stats") 
 ## Screen Login 
 ![ScreenCopy 1](/ScreenShots/1.png "title") 
