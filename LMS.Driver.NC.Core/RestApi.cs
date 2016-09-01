@@ -12,10 +12,15 @@ namespace LMS.Drivers.NC.Core
         private readonly string _token;
         private readonly Uri _baseUrl;
 
-        public RestApi(Uri url, Guid token)
+        /// <summary>
+        /// Init the rest API client
+        /// </summary>
+        /// <param name="url">Server Url</param>
+        /// <param name="token">Token to auth operation</param>
+        public RestApi(Uri url, string token)
         {
             this._baseUrl = url;
-            this._token = token.ToString();
+            this._token = token;
         }
 
         public async Task<string> Log(Error message)
@@ -40,7 +45,7 @@ namespace LMS.Drivers.NC.Core
                 httpClient.BaseAddress = this._baseUrl;
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("lmstoken", this._token);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
-                var response = await httpClient.PostAsync("api/logs/add", content).ConfigureAwait(continueOnCapturedContext: false);
+                var response = await httpClient.PostAsync("api/logs/add", content).ConfigureAwait(false);
                 return response.ReasonPhrase;
             }
         }

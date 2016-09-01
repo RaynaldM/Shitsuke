@@ -13,13 +13,13 @@ namespace LMS.Driver.NC.NLog
         public LMSNLog()
         {
             this.Host = "localhost";
-            this.Token = Guid.Empty;
+            this.Token = Guid.Empty.ToString();
         }
 
         [RequiredParameter]
         public string Host { get; set; }
         [RequiredParameter]
-        public Guid Token { get; set; }
+        public string Token { get; set; }
         [RequiredParameter]
         public string ApplicationName { get; set; }
 
