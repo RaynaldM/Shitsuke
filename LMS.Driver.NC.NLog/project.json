@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0-*",
+  "dependencies": {
+    "LMS.Driver.NC.Core": "0.1.0-*",
+    "NETStandard.Library": "1.6.0",
+    "NLog": "4.4.0-betaV15"
+  },
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": "dnxcore50"
+    }
+  },
+  "buildOptions": {
+    "optimize": true,
+    "xmlDoc": true
+  }
+}

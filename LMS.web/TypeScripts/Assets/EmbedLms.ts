@@ -152,7 +152,12 @@ function getBrowserInfo(): any {
 	else if (nAgt.indexOf("Trident/") != -1) {
 		browser = "Microsoft Internet Explorer";
 		version = nAgt.substring(nAgt.indexOf("rv:") + 3);
-	}
+    }
+    // Edge
+    else if ((verOffset =nAgt.indexOf("Edge/")) != -1) {
+        browser = "Microsoft Edge";
+        version = nAgt.substring(5);
+    }
 	// Other browsers
 	else if ((nameOffset = nAgt.lastIndexOf(" ") + 1) < (verOffset = nAgt.lastIndexOf("/"))) {
 		browser = nAgt.substring(nameOffset, verOffset);

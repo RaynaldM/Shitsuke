@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Net;
+using System.Net.Http;
+using System.ServiceModel.Channels;
+using System.Web;
 using System.Web.Http;
 using System.Web.Http.Cors;
 using System.Web.Http.Description;
@@ -25,6 +28,8 @@ namespace LMS.web.Api
         [EnableCors("*", "*", "*")]
         public IHttpActionResult Ping(UserPing ping)
         {
+            //var ip = HttpContext.Current.Request.UserHostAddress;
+
             if (ping == null)
                 return BadRequest("ping data can not be null");
             if (!ping.IsValid)
@@ -37,10 +42,29 @@ namespace LMS.web.Api
             }
             catch (Exception ex)
             {
-                this.Logger.Error(ex,"Ping service");
+                this.Logger.Error(ex, "Ping service");
                 return StatusCode(HttpStatusCode.ServiceUnavailable);
             }
 
+        }
+
+        private string GetClientIp(HttpRequestMessage request)
+        {
+            if (request.Properties.ContainsKey("MS_HttpContext"))
+            {
+                return ((HttpContextWrapper)request.Properties["MS_HttpContext"]).Request.UserHostAddress;
+            }
+            if (request.Properties.ContainsKey(RemoteEndpointMessageProperty.Name))
+            {
+                var prop = (RemoteEndpointMessageProperty)request.Properties[RemoteEndpointMessageProperty.Name];
+                return prop.Address;
+            }
+            if (HttpContext.Current != null)
+            {
+                return HttpContext.Current.Request.UserHostAddress;
+            }
+            return null;
+          
         }
     }
 }
