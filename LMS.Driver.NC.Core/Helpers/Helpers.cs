@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.Specialized;
-using System.Drawing;
-using System.IO;
 using System.Text.RegularExpressions;
 using LMS.Core.Models;
 
@@ -10,18 +7,7 @@ namespace LMS.Drivers.NC.Core.Helpers
 {
     public static class Helpers
     {
-        public static IEnumerable<DateTime> GetMinutesInGap(this DateTime startDate, int gap)
-        {
-            var start = startDate;
-            var lastMinutes = new List<DateTime>(gap);
-            for (int t = 0; t < gap; t++)
-            {
-                lastMinutes.Add(new DateTime(start.Year, start.Month, start.Day, start.Hour, start.Minute, 0));
-                start = start.AddMinutes(1);
-            }
-            return lastMinutes;
-        }
-
+      
         public static NameValueCollection GetNameValueCollection(IEnumerable<NameValuePair> pairs)
         {
             var result = new NameValueCollection();
@@ -89,24 +75,7 @@ namespace LMS.Drivers.NC.Core.Helpers
         {
             return string.IsNullOrEmpty(s);
         }
-
-        /// <summary>
-        /// Returns the first non-null/non-empty parameter when this String is null/empty.
-        /// </summary>
-        public static string IsNullOrEmptyReturn(this string s, params string[] otherPossibleResults)
-        {
-            if (s.HasValue())
-                return s;
-
-            foreach (string t in otherPossibleResults ?? new string[0])
-            {
-                if (t.HasValue())
-                    return t;
-            }
-
-            return "";
-        }
-
+        
         /// <summary>
         /// Answers true if this String is neither null or empty.
         /// </summary>
@@ -114,21 +83,6 @@ namespace LMS.Drivers.NC.Core.Helpers
         public static bool HasValue(this string s)
         {
             return !IsNullOrEmpty(s);
-        }
-
-        //http://www.dailycoding.com/posts/convert_image_to_base64_string_and_base64_string_to_image.aspx
-        //http://www.advancesharp.com/blog/1188/mvc-display-image-from-database
-        public static Image Base64ToImage(string base64String)
-        {
-            // Convert Base64 String to byte[]
-            byte[] imageBytes = Convert.FromBase64String(base64String);
-            MemoryStream ms = new MemoryStream(imageBytes, 0,
-              imageBytes.Length);
-
-            // Convert byte[] to Image
-            ms.Write(imageBytes, 0, imageBytes.Length);
-            Image image = Image.FromStream(ms, true);
-            return image;
         }
     }
 }
