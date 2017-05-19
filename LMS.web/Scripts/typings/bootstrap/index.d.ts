@@ -4,7 +4,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 
-/// <reference path="../jquery/jquery.d.ts"/>
+///// <reference types="jquery"/>
 
 interface ModalOptions {
     backdrop?: boolean|string;
@@ -79,6 +79,10 @@ interface AffixOptions {
     target?: any;
 }
 
+interface TransitionEventNames {
+    end: string;
+}
+
 interface JQuery {
     modal(options?: ModalOptions): JQuery;
     modal(options?: ModalOptionsBackdropString): JQuery;
@@ -114,6 +118,12 @@ interface JQuery {
     typeahead(options?: TypeaheadOptions): JQuery;
 
     affix(options?: AffixOptions): JQuery;
+
+    emulateTransitionEnd(duration: number): JQuery;
+}
+
+interface JQuerySupport {
+    transition: boolean | TransitionEventNames;
 }
 
 declare module "bootstrap" {

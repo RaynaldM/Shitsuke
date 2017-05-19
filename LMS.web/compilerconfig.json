@@ -10,5 +10,13 @@
   {
     "outputFile": "Content/LogDetail.css",
     "inputFile": "Content/LogDetail.less"
+  },
+  {
+    "outputFile": "Content/bootstrap/bootstrap.css",
+    "inputFile": "Content/bootstrap/bootstrap.less"
+  },
+  {
+    "outputFile": "Content/DashboardIndex.css",
+    "inputFile": "Content/DashboardIndex.less"
   }
 ]
