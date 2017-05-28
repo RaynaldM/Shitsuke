@@ -283,13 +283,10 @@
     <Content Include="Content\Addons\bootstrap-datetimepicker-build.min.css">
       <DependentUpon>bootstrap-datetimepicker-build.css</DependentUpon>
     </Content>
+    <Content Include="Content\Addons\bootstrap-material-datetimepicker.less" />
     <None Include="Content\Addons\bootstrap-multiselect.css">
       <DependentUpon>bootstrap-multiselect.less</DependentUpon>
     </None>
-    <Content Include="Content\Addons\bootstrap-material-datetimepicker.css" />
-    <Content Include="Content\Addons\bootstrap-material-datetimepicker.min.css">
-      <DependentUpon>bootstrap-material-datetimepicker.css</DependentUpon>
-    </Content>
     <Content Include="Content\Addons\bootstrap-multiselect.min.css">
       <DependentUpon>bootstrap-multiselect.css</DependentUpon>
     </Content>
@@ -315,11 +312,18 @@
     <Content Include="Content\Addons\Modal.min.css">
       <DependentUpon>Modal.css</DependentUpon>
     </Content>
+    <Content Include="Content\Addons\select2.css" />
     <Content Include="Content\App.css">
       <DependentUpon>App.less</DependentUpon>
     </Content>
     <Content Include="Content\App.min.css">
       <DependentUpon>App.css</DependentUpon>
+    </Content>
+    <Content Include="Content\bootstrap\bootstrap.css">
+      <DependentUpon>bootstrap.less</DependentUpon>
+    </Content>
+    <Content Include="Content\bootstrap\bootstrap.min.css">
+      <DependentUpon>bootstrap.css</DependentUpon>
     </Content>
     <Content Include="Content\DashboardIndex.css">
       <DependentUpon>DashboardIndex.less</DependentUpon>
@@ -498,6 +502,7 @@
     <Content Include="Scripts\Handlebars.min.js.map">
       <DependentUpon>Handlebars.min.js</DependentUpon>
     </Content>
+    <Content Include="Content\Addons\select2-bootstrap.less" />
     <None Include="Content\Addons\toastr.less" />
     <Content Include="Content\Feedback.less" />
     <None Include="Content\Bootstrap.Paper\bootswatch.less" />
@@ -733,6 +738,7 @@
     <Content Include="Scripts\moment-with-locales.min.js" />
     <Content Include="Scripts\moment.js" />
     <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\select2.js" />
     <Content Include="Scripts\toastr.js" />
     <Content Include="Scripts\toastr.min.js">
       <DependentUpon>toastr.js</DependentUpon>
@@ -805,6 +811,7 @@
     <Content Include="Views\Feedback\_ScreenshotZoom.cshtml" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
+    <Content Include="Views\Shared\_LayoutForm.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -838,6 +845,7 @@
     <TypeScriptCompile Include="TypeScripts\CommonClass\BasePageWithPeriod.ts" />
     <TypeScriptCompile Include="TypeScripts\CommonClass\enums.ts" />
     <TypeScriptCompile Include="TypeScripts\DashBoardIndex.ts" />
+    <TypeScriptCompile Include="TypeScripts\Extend\BasePageForm.ts" />
     <TypeScriptCompile Include="TypeScripts\FeedbackDetail.ts" />
     <TypeScriptCompile Include="TypeScripts\FeedbackIndex.ts" />
     <TypeScriptCompile Include="TypeScripts\HintedStatIndex.ts" />

@@ -18,5 +18,9 @@
   {
     "outputFile": "Content/DashboardIndex.css",
     "inputFile": "Content/DashboardIndex.less"
+  },
+  {
+    "outputFile": "Content/Form.css",
+    "inputFile": "Content/Form.less"
   }
 ]

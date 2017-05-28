@@ -1,0 +1,34 @@
+﻿@using aspnet_mvc_helpers
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section head
+{
+    @Html.Css("~/content/form.css")
+    @RenderSection("head", false)
+}
+@section scripts
+{
+    @Scripts.Render("~/bundles/form")
+    @RenderSection("scripts", false)
+}
+@section PageReady
+{
+    @RenderSection("PageReady", false)
+}
+<div id="form-menu" class="sticky-menu">
+    <div class="container">
+        <h4 class="col-md-5">@RenderSection("menutitle", false)</h4>
+        <div id="form-menu-middle" class="col-md-3">@RenderSection("menumidle", false)</div>
+        <div class="col-md-4">
+            <div id="form-menu-button" class="pull-right">
+                <input id="save-form" value="Sauvegarder" class="btn btn-success" />
+                <button id="cancel-form" class="btn btn-default">Quitter</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+@RenderBody()
