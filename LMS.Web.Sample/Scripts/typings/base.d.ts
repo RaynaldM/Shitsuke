@@ -1,6 +1,6 @@
 ﻿/// <reference path="moment/moment.d.ts" />
 /// <reference path="jquery.validation/jquery.validation.d.ts" />
-/// <reference path="bootstrap/bootstrap.d.ts" />
+/// <reference path="bootstrap/index.d.ts" />
 /// <reference path="toastr/toastr.d.ts" />
 /// <reference path="handlebars/handlebars.d.ts" />
 

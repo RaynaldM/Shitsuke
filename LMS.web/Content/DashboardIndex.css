@@ -2,12 +2,11 @@
 #count-logs {
   margin-top: 0;
   font-size: 72px;
-  color: #000000;
+  color: #000;
 }
 .ct-grey {
-  stroke: #bbbbbb;
+  stroke: #bbb;
 }
 a.small:hover {
-  color: #2196f3;
+  color: #2196F3;
 }
-/*# sourceMappingURL=DashboardIndex.css.map */

@@ -1,27 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{9CD9E90F-7C96-4E89-A435-5D5067C3BAD6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{4C7EA942-CCEA-4777-AF71-890237D47DCD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS.Core", "LMS.Core\LMS.Core.csproj", "{EA52A07F-C0E3-4618-9CDE-B6077284EC24}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS.Domain", "LMS.Domain\LMS.Domain.csproj", "{3E15DFD7-E795-4B87-88D5-D86ED172F625}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS.Repository.Linq2Db", "LMS.Repository.Linq2Db\LMS.Repository.Linq2Db.csproj", "{B6EBCDBB-66D9-4311-804B-85EB046FE09F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS.Services", "LMS.Services\LMS.Services.csproj", "{982850DF-061E-461A-BE7C-407F367E444A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A9540100-02DA-480D-8F68-77A9AB8A5211}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 		Todo.txt = Todo.txt
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS.web", "LMS.web\LMS.web.csproj", "{F50F6858-251E-45EE-B564-DA6BD17F4681}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{BC4CD3EE-FE91-4200-9AF7-8CDCC743933A}"
 	ProjectSection(SolutionItems) = preProject
@@ -39,6 +29,29 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LogsDrivers", "LogsDrivers"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{ED503A00-5D92-4212-A14A-6917008F9A51}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScreenShots", "ScreenShots", "{6E7CA27A-F524-4D20-9CEE-B329729CC429}"
+	ProjectSection(SolutionItems) = preProject
+		ScreenShots\1.png = ScreenShots\1.png
+		ScreenShots\2.png = ScreenShots\2.png
+		ScreenShots\3HintedStatistics.png = ScreenShots\3HintedStatistics.png
+		ScreenShots\4BLogsAnalysis.png = ScreenShots\4BLogsAnalysis.png
+		ScreenShots\4Logsanalysis.png = ScreenShots\4Logsanalysis.png
+		ScreenShots\5LogDetail.png = ScreenShots\5LogDetail.png
+		ScreenShots\7FeedbacksList.png = ScreenShots\7FeedbacksList.png
+		ScreenShots\8FeedbackDetail.png = ScreenShots\8FeedbackDetail.png
+		ScreenShots\9.png = ScreenShots\9.png
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS.Core", "LMS.Core\LMS.Core.csproj", "{EA52A07F-C0E3-4618-9CDE-B6077284EC24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS.Domain", "LMS.Domain\LMS.Domain.csproj", "{3E15DFD7-E795-4B87-88D5-D86ED172F625}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS.Repository.Linq2Db", "LMS.Repository.Linq2Db\LMS.Repository.Linq2Db.csproj", "{B6EBCDBB-66D9-4311-804B-85EB046FE09F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS.Services", "LMS.Services\LMS.Services.csproj", "{982850DF-061E-461A-BE7C-407F367E444A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS.web", "LMS.web\LMS.web.csproj", "{F50F6858-251E-45EE-B564-DA6BD17F4681}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS.Web.Sample", "LMS.Web.Sample\LMS.Web.Sample.csproj", "{5AC7CD29-5861-43D1-A506-2BF244730AC6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS.Driver.Elmah", "LMS.Driver.Elmah\LMS.Driver.Elmah.csproj", "{D1989A48-2A02-4ABE-8C53-C0519EF42C9F}"
@@ -53,22 +66,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS.Resources", "LMS.Resour
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS.Driver.NLog", "LMS.Driver.NLog\LMS.Driver.NLog.csproj", "{CEF6618D-8402-46D9-B4CB-230B927BEE72}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScreenShots", "ScreenShots", "{6E7CA27A-F524-4D20-9CEE-B329729CC429}"
-	ProjectSection(SolutionItems) = preProject
-		ScreenShots\1.png = ScreenShots\1.png
-		ScreenShots\2.png = ScreenShots\2.png
-		ScreenShots\3HintedStatistics.png = ScreenShots\3HintedStatistics.png
-		ScreenShots\4BLogsAnalysis.png = ScreenShots\4BLogsAnalysis.png
-		ScreenShots\4Logsanalysis.png = ScreenShots\4Logsanalysis.png
-		ScreenShots\5LogDetail.png = ScreenShots\5LogDetail.png
-		ScreenShots\7FeedbacksList.png = ScreenShots\7FeedbacksList.png
-		ScreenShots\8FeedbackDetail.png = ScreenShots\8FeedbackDetail.png
-		ScreenShots\9.png = ScreenShots\9.png
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LMS.Driver.NC.Core", "LMS.Driver.NC.Core\LMS.Driver.NC.Core.csproj", "{700D083E-66DE-4583-ACC9-D7B7C56DAC4A}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "LMS.Drivers.NC.Core", "LMS.Driver.NC.Core\LMS.Drivers.NC.Core.xproj", "{700D083E-66DE-4583-ACC9-D7B7C56DAC4A}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "LMS.Driver.NC.NLog", "LMS.Driver.NC.NLog\LMS.Driver.NC.NLog.xproj", "{A9453456-BF72-4CC7-9823-74699D4CB420}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LMS.Driver.NC.NLog", "LMS.Driver.NC.NLog\LMS.Driver.NC.NLog.csproj", "{A9453456-BF72-4CC7-9823-74699D4CB420}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -137,17 +137,17 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{90F51AC7-1DF6-4510-919F-64D213D2EA1A} = {A9540100-02DA-480D-8F68-77A9AB8A5211}
+		{6E7CA27A-F524-4D20-9CEE-B329729CC429} = {A9540100-02DA-480D-8F68-77A9AB8A5211}
 		{EA52A07F-C0E3-4618-9CDE-B6077284EC24} = {9CD9E90F-7C96-4E89-A435-5D5067C3BAD6}
 		{3E15DFD7-E795-4B87-88D5-D86ED172F625} = {9CD9E90F-7C96-4E89-A435-5D5067C3BAD6}
 		{B6EBCDBB-66D9-4311-804B-85EB046FE09F} = {4C7EA942-CCEA-4777-AF71-890237D47DCD}
-		{90F51AC7-1DF6-4510-919F-64D213D2EA1A} = {A9540100-02DA-480D-8F68-77A9AB8A5211}
 		{5AC7CD29-5861-43D1-A506-2BF244730AC6} = {ED503A00-5D92-4212-A14A-6917008F9A51}
 		{D1989A48-2A02-4ABE-8C53-C0519EF42C9F} = {2F64C560-DBD8-4E63-877E-8D21F0AF0CE4}
 		{D0F42AEE-A47F-435B-9BEB-917785072240} = {2F64C560-DBD8-4E63-877E-8D21F0AF0CE4}
 		{26DDDBF6-4B21-409D-B0C2-24606D8898F3} = {2F64C560-DBD8-4E63-877E-8D21F0AF0CE4}
 		{CFF4B59D-3E9F-44A6-8DD8-AFF123EC50BD} = {4C7EA942-CCEA-4777-AF71-890237D47DCD}
 		{CEF6618D-8402-46D9-B4CB-230B927BEE72} = {2F64C560-DBD8-4E63-877E-8D21F0AF0CE4}
-		{6E7CA27A-F524-4D20-9CEE-B329729CC429} = {A9540100-02DA-480D-8F68-77A9AB8A5211}
 		{700D083E-66DE-4583-ACC9-D7B7C56DAC4A} = {2F64C560-DBD8-4E63-877E-8D21F0AF0CE4}
 		{A9453456-BF72-4CC7-9823-74699D4CB420} = {2F64C560-DBD8-4E63-877E-8D21F0AF0CE4}
 	EndGlobalSection

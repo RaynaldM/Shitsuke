@@ -43,6 +43,15 @@ namespace LMS.web
                     "~/Scripts/Extends.js")
                 .Include("~/TypeScripts/CommonClass/*.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/form")
+             .Include("~/Scripts/jquery.validate*",
+                 "~/Scripts/jquery.unobtrusive*",
+                 "~/Scripts/bootstrap-material-datetimepicker.js",
+                 "~/Scripts/bootstrap-maxlength.js",
+                 "~/Scripts/select2.js",
+                 "~/Scripts/Extends-form.js",
+                 "~/TypeScripts/Extends/BasePageForm.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/graph")
                 .Include("~/Scripts/chartist.js",
                 "~/Scripts/chartist-plugin-legend.js"));
