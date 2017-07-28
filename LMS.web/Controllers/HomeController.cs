@@ -11,6 +11,10 @@ namespace LMS.web.Controllers
         {
             if (this.User.Identity.IsAuthenticated)
             {
+                if (this.User.IsInRole("Guest"))
+                {
+                    // redirect to GuestHomePage
+                }
                 return RedirectToAction("Index","DashBoard");
             }
             return View();

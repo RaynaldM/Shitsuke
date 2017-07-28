@@ -1,0 +1,24 @@
+﻿@using aspnet_mvc_helpers
+@using LMS.Resources
+@{
+    ViewBag.Title = Global.FeedbackDetailId + ViewBag.id;
+}
+@section Head{
+        @Html.Css("~/content/FeedbackDetail.css")
+}
+@section scripts{
+    @Html.CompressedPartial("_Core")
+    @Html.CompressedPartial("_Screenshot")
+    @Html.TypeScript("~/Typescripts/FeedbackDetail.ts")
+    <script>
+        window.CurrentBasePage = new FeedbackDetail({id:@ViewBag.id});
+    </script>
+}
+@section wrapperbar{
+    <h1 class="h3 col-md-11">@ViewBag.Title</h1>
+}
+<section id="core" class="col-md-6 col-sm-12"></section>
+<section id="screenshot" class="col-md-6 col-sm-12"></section>
+@section modal{
+    @Html.CompressedPartial("_ScreenshotZoom")
+}

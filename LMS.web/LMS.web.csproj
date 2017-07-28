@@ -232,6 +232,7 @@
     <Compile Include="Controllers\DashBoardController.cs" />
     <Compile Include="Controllers\ExceptionsController.cs" />
     <Compile Include="Controllers\FeedbackController.cs" />
+    <Compile Include="Controllers\GuestController.cs" />
     <Compile Include="Controllers\HintedStatController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LogsController.cs" />
@@ -812,6 +813,12 @@
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
     <Content Include="Views\Shared\_LayoutForm.cshtml" />
+    <Content Include="Views\Guest\_Core.cshtml" />
+    <Content Include="Views\Guest\_List.cshtml" />
+    <Content Include="Views\Guest\_Screenshot.cshtml" />
+    <Content Include="Views\Guest\_ScreenshotZoom.cshtml" />
+    <Content Include="Views\Guest\Detail.cshtml" />
+    <Content Include="Views\Guest\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

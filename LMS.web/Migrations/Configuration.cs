@@ -19,15 +19,15 @@ namespace LMS.web.Migrations
         protected override void Seed(LMS.web.Models.ApplicationDbContext context)
         {
             context.Roles.AddOrUpdate(p => p.Id,
-              new IdentityRole("Reader"),
-              new IdentityRole("Admin")
-              );
-
+                new IdentityRole("Guest"), // can read and add feedback
+                new IdentityRole("Reader"),
+                new IdentityRole("Admin")
+            );
 
             var userStore = new UserStore<ApplicationUser>(context);
             var userManager = new UserManager<ApplicationUser>(userStore);
 
-         
+
             if (!(context.Users.Any(u => u.UserName == "admin@example.com")))
             {
                 var userToInsert = new ApplicationUser
@@ -40,7 +40,7 @@ namespace LMS.web.Migrations
                 userManager.AddToRole(userToInsert.Id, "Admin");
             }
             base.Seed(context);
-        
+
         }
     }
 }

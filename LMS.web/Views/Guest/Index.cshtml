@@ -1,0 +1,38 @@
+﻿@using aspnet_mvc_helpers
+@using LMS.Resources
+@{
+    ViewBag.Title = Global.FeedbackList;
+}
+@section Head{
+    @Html.Css("~/content/addons/jquery.bootgrid.css")
+    @Html.Css("~/content/feedbackindex.css")
+}
+@section scripts{
+    @Html.JavaScript("~/Scripts/jquery.bootgrid.js")
+    @Html.TypeScript("~/Typescripts/FeedbackIndex.ts")
+    <script>
+        window.CurrentBasePage = new FeedbackIndex();
+    </script>
+}
+@section wrapperbar{
+    <h1 class="h3 col-md-11">@ViewBag.Title</h1>
+}
+<section class="row">
+     <div class="col-md-offset-3 col-md-4 col-sm-12">
+        <div role="group" class="btn-group pull-right ">
+            <button class="choice-type btn btn-default active" type="button" data-choice="-1">@Global.FeedbackAll</button>
+            <button class="choice-type btn btn-default" type="button" data-choice="0">@Global.FeedbackBug</button>
+            <button class="choice-type btn btn-default" type="button" data-choice="1">@Global.Feedback</button>
+            <button class="choice-type btn btn-default" type="button" data-choice="2">@Global.FeedbackQuestion</button>
+        </div>
+    </div>
+    <div class="col-md-5 col-sm-12">
+        <div role="group" class="btn-group pull-right ">
+            <button class="choice-status btn btn-default active" type="button" data-choice="-1">@Global.FeedbackAll</button>
+            <button class="choice-status btn btn-default" type="button" data-choice="0">@Global.FeedbackNew</button>
+            <button class="choice-status btn btn-default" type="button" data-choice="1">@Global.FeedbackOpen</button>
+            <button class="choice-status btn btn-default" type="button" data-choice="3">@Global.FeedbackClose</button>
+        </div>
+    </div>
+</section>
+@Html.CompressedPartial("_List")
