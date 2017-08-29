@@ -498,4 +498,7 @@
   <data name="SidedarHintedStatistics" xml:space="preserve">
     <value>Hinted Statistics</value>
   </data>
+  <data name="SidebarInjectLogFile" xml:space="preserve">
+    <value>Inject a log file</value>
+  </data>
 </root>

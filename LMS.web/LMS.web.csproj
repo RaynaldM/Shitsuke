@@ -30,6 +30,7 @@
     <TypeScriptToolsVersion>2.2</TypeScriptToolsVersion>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -234,6 +235,7 @@
     <Compile Include="Controllers\FeedbackController.cs" />
     <Compile Include="Controllers\HintedStatController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InjectFileController.cs" />
     <Compile Include="Controllers\LogsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -283,10 +285,16 @@
     <Content Include="Content\Addons\bootstrap-datetimepicker-build.min.css">
       <DependentUpon>bootstrap-datetimepicker-build.css</DependentUpon>
     </Content>
+    <Content Include="Content\Addons\bootstrap-material-datetimepicker.css">
+      <DependentUpon>bootstrap-material-datetimepicker.less</DependentUpon>
+    </Content>
     <Content Include="Content\Addons\bootstrap-material-datetimepicker.less" />
     <None Include="Content\Addons\bootstrap-multiselect.css">
       <DependentUpon>bootstrap-multiselect.less</DependentUpon>
     </None>
+    <Content Include="Content\Addons\bootstrap-material-datetimepicker.min.css">
+      <DependentUpon>bootstrap-material-datetimepicker.css</DependentUpon>
+    </Content>
     <Content Include="Content\Addons\bootstrap-multiselect.min.css">
       <DependentUpon>bootstrap-multiselect.css</DependentUpon>
     </Content>
@@ -367,6 +375,12 @@
     </Content>
     <Content Include="Content\HomeIndex.min.css">
       <DependentUpon>HomeIndex.css</DependentUpon>
+    </Content>
+    <Content Include="Content\InjectFile.css">
+      <DependentUpon>InjectFile.less</DependentUpon>
+    </Content>
+    <Content Include="Content\InjectFile.min.css">
+      <DependentUpon>InjectFile.css</DependentUpon>
     </Content>
     <Content Include="Content\LogDetail.css">
       <DependentUpon>LogDetail.less</DependentUpon>
@@ -613,6 +627,7 @@
     <Content Include="Content\bootstrap\bootstrap.less" />
     <Content Include="Content\bootstrap\badges.less" />
     <Content Include="Content\bootstrap\alerts.less" />
+    <Content Include="Content\InjectFile.less" />
     <None Include="Content\Site.less" />
     <None Include="Content\App.less" />
     <Content Include="Content\Site.css.map">
@@ -677,8 +692,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <None Include="Properties\PublishProfiles\em-logmonitor - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\em-logmonitor - Web Deploy.pubxml" />
     <Content Include="Scripts\embedlms.js.bundle" />
     <Content Include="Scripts\embedlms.min.js.map">
       <DependentUpon>embedlms.min.js</DependentUpon>
@@ -812,6 +825,7 @@
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
     <Content Include="Views\Shared\_LayoutForm.cshtml" />
+    <Content Include="Views\InjectFile\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

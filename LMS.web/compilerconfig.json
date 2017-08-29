@@ -22,5 +22,13 @@
   {
     "outputFile": "Content/Form.css",
     "inputFile": "Content/Form.less"
+  },
+  {
+    "outputFile": "Content/InjectFile.css",
+    "inputFile": "Content/InjectFile.less"
+  },
+  {
+    "outputFile": "Content/Addons/bootstrap-material-datetimepicker.css",
+    "inputFile": "Content/Addons/bootstrap-material-datetimepicker.less"
   }
 ]

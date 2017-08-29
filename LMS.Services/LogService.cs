@@ -14,6 +14,8 @@ namespace LMS.Services
         {
             try
             {
+                if (error.ErrorHash == null && !string.IsNullOrWhiteSpace(error.Detail))
+                    error.ErrorHash = error.GetHashCode();
                 return this.Repository.Insert(error);
             }
             catch (Exception ex)

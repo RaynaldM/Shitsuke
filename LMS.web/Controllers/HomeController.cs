@@ -11,6 +11,10 @@ namespace LMS.web.Controllers
         {
             if (this.User.Identity.IsAuthenticated)
             {
+                if (this.User.IsInRole("customer"))
+                {
+                    return RedirectToAction("", "");
+                }
                 return RedirectToAction("Index","DashBoard");
             }
             return View();

@@ -22,21 +22,33 @@ namespace LMS.Repository.Linq2Db
                 creationdate = error.CreationDate,
                 detail = error.Detail,
                 errorhash = error.ErrorHash,
-                httpmethod = error.HTTPMethod,
-                host = error.Host,
-                ipaddress = error.IPAddress,
-                machinename = error.MachineName,
-                message = error.Message,
+                httpmethod =this.ellipsis(error.HTTPMethod,8),
+                host = this.ellipsis(error.Host, 128),
+                ipaddress = this.ellipsis(error.IPAddress, 64),
+                machinename = this.ellipsis(error.MachineName,64),
+                message = this.ellipsis(error.Message, 1024),
                 sql = error.SQL,
-                source = error.Source,
+                source = this.ellipsis(error.Source, 128),
                 statuscode = error.StatusCode,
                 type = error.Type,
-                url = error.Url,
+                url = this.ellipsis(error.Url, 512),
                 fulljson = JsonConvert.SerializeObject(error),
                 errorlevel = (byte) (error.ErrorLevel?? ErrorLevel.Error)
             };
 
             return this.Insert(exp);
+        }
+
+        private String ellipsis(string s,int length, bool showEllipsis=true)
+        {
+            if (string.IsNullOrEmpty(s)) return s;
+            if (s.Length < length) return s;
+            string result = s.Substring(0,length);
+            if (showEllipsis)
+            {
+                result = result.Substring(0, length - 3) + "...";
+            }
+            return result;
         }
 
         public IFullLogModel GetFullLog(long id)
