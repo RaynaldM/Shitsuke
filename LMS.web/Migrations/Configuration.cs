@@ -19,38 +19,28 @@ namespace LMS.web.Migrations
         protected override void Seed(LMS.web.Models.ApplicationDbContext context)
         {
             context.Roles.AddOrUpdate(p => p.Id,
-              new IdentityRole("Reader"),
-              new IdentityRole("Admin")
-              );
-
+                new IdentityRole("Guest"), // can read and add feedback
+                new IdentityRole("Reader"),
+                new IdentityRole("Admin")
+            );
 
             var userStore = new UserStore<ApplicationUser>(context);
             var userManager = new UserManager<ApplicationUser>(userStore);
 
-            if (!(context.Users.Any(u => u.UserName == "landry.schmitt@soget.fr")))
+
+            if (!(context.Users.Any(u => u.UserName == "admin@example.com")))
             {
                 var userToInsert = new ApplicationUser
                 {
-                    UserName = "landry.schmitt@soget.fr",
-                    Email = "landry.schmitt@soget.fr",
+                    UserName = "admin@example.com",
+                    Email = "admin@example.com",
                     EmailConfirmed = true
                 };
-                userManager.Create(userToInsert, "74108520");
-                userManager.AddToRole(userToInsert.Id, "Admin");
-            }
-            if (!(context.Users.Any(u => u.UserName == "raynald.messie@soget.fr")))
-            {
-                var userToInsert = new ApplicationUser
-                {
-                    UserName = "raynald.messie@soget.fr",
-                    Email = "raynald.messie@soget.fr",
-                    EmailConfirmed = true
-                };
-                userManager.Create(userToInsert, "74108520");
+                userManager.Create(userToInsert, "123456789");
                 userManager.AddToRole(userToInsert.Id, "Admin");
             }
             base.Seed(context);
-        
+
         }
     }
 }
